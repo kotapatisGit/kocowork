@@ -7,9 +7,10 @@ export default {
         'founders-fire': '#FF4D3C',
         'legacy-green': '#3CB371',
         'focus-black': '#1A1A1A',
-        'blank-slate': '#FFFFFF',
+        'blank-slate': '#FFF5EE',
         'signal-blue': '#0066FF',
-        'core-stack': '#8A2BE2'
+        'core-stack': '#8A2BE2',
+        'cream': '#F5F5DC'
       },
       fontFamily: {
         'darker': ['Darker Grotesque', 'sans-serif']
