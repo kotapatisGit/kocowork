@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
               e.preventDefault();
               scrollToSection(link.href);
             }}
-            className="flex-1 bg-blue-500 hover:bg-blue-600 text-blank-slate font-medium text-lg flex items-center justify-center transition-all duration-200 transform hover:translate-y-[2px] hover:shadow-inner"
+            className="flex-1 bg-blue-600 hover:bg-blue-600 text-blank-slate font-medium text-lg flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
           >
             {link.name}
           </a>

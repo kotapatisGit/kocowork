@@ -11,14 +11,13 @@ const AnimatedIntroSection: React.FC = () => {
     scope.current = createScope({ root: rootRef.current }).add((scope) => {
       // Initial setup
       animate('.slide-section', {
-        opacity: 0,
         translateY: '100px',
+        scale: 0.9,
         duration: 0
       });
 
       // Hide text initially
       animate('.slide-text', {
-        opacity: 0,
         translateY: 50,
         scale: 0.95,
         duration: 0
@@ -26,10 +25,10 @@ const AnimatedIntroSection: React.FC = () => {
 
       // Scroll-triggered animations
       animate('.slide-section', {
-        opacity: 1,
         translateY: '0px',
+        scale: 1,
         duration: 1200,
-        ease: 'out(4)',
+        ease: 'out(1)',
         autoplay: onScroll({
           target: rootRef.current!,
           sync: true
@@ -38,7 +37,6 @@ const AnimatedIntroSection: React.FC = () => {
 
       // Text animation triggered by scroll
       animate('.slide-text', {
-        opacity: 1,
         translateY: 0,
         scale: 1,
         duration: 1000,
@@ -49,11 +47,10 @@ const AnimatedIntroSection: React.FC = () => {
         })
       });
 
-      // Hero section fade out animation
+      // Hero section scale animation
       const heroSection = document.querySelector('.hero-section');
       if (heroSection) {
         animate(heroSection, {
-        //   opacity: [1, 0.9],
           scale: [1, 0.8],
           duration: 2000,
           ease: 'out(2)',
@@ -76,7 +73,7 @@ const AnimatedIntroSection: React.FC = () => {
       className="relative min-h-screen bg-founders-fire py-20" // Added padding to account for navbar
     >
       <div className="slide-section w-full h-full">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" />
+        <div className="absolute rounded-3xl inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" />
         
         {/* Content */}
         <div className="relative z-40 min-h-screen flex items-center px-8">

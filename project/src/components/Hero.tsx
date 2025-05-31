@@ -2,9 +2,45 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import OfferBanner from './OfferBanner';
 
+// Define styles outside the component
+const animationStyles = `
+  @keyframes bounce-in {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(-20%);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce-scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+`;
+
+// Add styles to document head
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style');
+  style.innerHTML = animationStyles;
+  document.head.appendChild(style);
+}
+
 const Hero: React.FC = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [isChanging, setIsChanging] = useState(false);
+  const [displayText, setDisplayText] = useState('');
+  const [isAnimating, setIsAnimating] = useState(false);
+  
   const phrases = [
     "enable productivity",
     "foster innovation",
@@ -12,22 +48,47 @@ const Hero: React.FC = () => {
     "create success"
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsChanging(true);
-      setTimeout(() => {
-        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-        setIsChanging(false);
-      }, 500);
-    }, 3000);
+  const animateText = async (newText: string, direction: 'in' | 'out') => {
+    setIsAnimating(true);
+    const letters = newText.split('');
+    
+    if (direction === 'out') {
+      for (let i = letters.length - 1; i >= 0; i--) {
+        await new Promise(resolve => setTimeout(resolve, 50));
+        setDisplayText(prev => prev.slice(0, i));
+      }
+    } else {
+      for (let i = 0; i <= letters.length; i++) {
+        await new Promise(resolve => setTimeout(resolve, 50));
+        setDisplayText(letters.slice(0, i).join(''));
+      }
+    }
+    setIsAnimating(false);
+  };
 
+  useEffect(() => {
+    const changePhrase = async () => {
+      if (!isAnimating) {
+        await animateText(phrases[currentPhraseIndex], 'out');
+        const nextIndex = (currentPhraseIndex + 1) % phrases.length;
+        setCurrentPhraseIndex(nextIndex);
+        await animateText(phrases[nextIndex], 'in');
+      }
+    };
+
+    const interval = setInterval(changePhrase, 4000);
     return () => clearInterval(interval);
+  }, [currentPhraseIndex, isAnimating]);
+
+  useEffect(() => {
+    // Initialize first phrase
+    if (displayText === '') {
+      setDisplayText(phrases[0]);
+    }
   }, []);
 
   return (
-    <section 
-      className="hero-section relative min-h-screen bg-founders-fire"
-    >
+    <section className="hero-section relative min-h-screen bg-founders-fire">
       <div className="relative min-h-screen flex flex-col pt-20">
         {/* Offer Banner */}
         <OfferBanner />
@@ -50,29 +111,48 @@ const Hero: React.FC = () => {
             <div className="w-full flex justify-between items-end">
               {/* Text Content */}
               <div className="max-w-2xl">
-                <div className="flex flex-wrap items-baseline gap-x-3">
-                  <h1 className="text-4xl md:text-5xl font-bold text-cream leading-tight whitespace-nowrap">
+                <div className="flex flex-col gap-y-2">
+                  <h1 className="text-4xl md:text-6xl font-bold text-cream leading-tight">
                     For every professional, for every team
                   </h1>
-                  <span 
-                    className={`text-4xl md:text-7xl font-bold text-founders-fire leading-tight whitespace-nowrap transition-all duration-1000 ${
-                      isChanging ? 'opacity-0 transform -translate-y-2' : 'opacity-100 transform translate-y-0'
-                    }`}
-                  >
-                    {phrases[currentPhraseIndex]}
-                  </span>
+                  <div className="h-[80px] flex items-center">
+                    <span className="text-4xl md:text-7xl font-bold text-founders-fire leading-tight whitespace-nowrap inline-block">
+                      {displayText.split('').map((letter, index) => (
+                        <span
+                          key={index}
+                          className="inline-block"
+                          style={{
+                            animationDelay: `${index * 0.05}s`,
+                            opacity: 0,
+                            animation: `
+                              bounce-in 0.5s ${index * 0.05}s forwards,
+                              bounce-scale 2s ${index * 0.05}s infinite
+                            `
+                          }}
+                        >
+                          {letter === ' ' ? '\u00A0' : letter}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
                 </div>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex gap-4">
-                <button className="flex items-center justify-center gap-2 bg-black hover:bg-opacity-80 text-white px-8 py-4 rounded-full text-base font-medium transition-all duration-300 transform hover:-translate-y-1">
-                  <span>WhatsApp Us</span>
-                  <ArrowRight className="w-5 h-5" />
+              <div className="flex flex-col gap-4 w-[200px]">
+                <button className="group relative flex items-center justify-between w-full bg-focus-black hover:text-cream px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                  <span className="relative z-10 text-xl text-cream transition-colors duration-500 group-hover:text-cream">WhatsApp Us</span>
+                  <div className="absolute right-0 w-14 h-full bg-focus-black flex items-center justify-center rounded-r-full">
+                    <ArrowRight className="w-5 h-5 text-cream relative z-10" />
+                  </div>
+                  <div className="absolute w-14 h-full bg-blue-600 right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>
-                <button className="flex items-center justify-center gap-2 bg-black hover:bg-opacity-80 text-white px-8 py-4 rounded-full text-base font-medium transition-all duration-300 transform hover:-translate-y-1">
-                  <span>Find Your Plan</span>
-                  <ArrowRight className="w-5 h-5" />
+                <button className="group relative flex items-center justify-between w-full bg-cream hover:text-cream px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                  <span className="relative z-10 text-xl text-focus-black transition-colors duration-500 group-hover:text-cream">Find Your Plan</span>
+                  <div className="absolute right-0 w-14 h-full bg-founders-fire flex items-center justify-center rounded-r-full">
+                    <ArrowRight className="w-5 h-5 text-cream relative z-10" />
+                  </div>
+                  <div className="absolute w-14 h-full bg-founders-fire right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>
               </div>
             </div>
