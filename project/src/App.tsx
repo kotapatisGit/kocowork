@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import AnimatedIntroSection from './components/AnimatedIntroSection';
 import SocialMediaSection from './components/SocialMediaSection';
 import ImpactSection from './components/ImpactSection';
+import FullscreenImageSection from './components/FullscreenImageSection';
 import PricingSection from './components/Pricing/PricingSection';
 import ContactForm from './components/Contact/ContactForm';
 import Footer from './components/Footer';
@@ -17,6 +18,7 @@ function App() {
       <AnimatedIntroSection />
       <SocialMediaSection />
       <ImpactSection />
+      <FullscreenImageSection />
       <PricingSection />
       <ContactForm />
       <Footer />
