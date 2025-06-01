@@ -8,24 +8,41 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: 'Find Your Plan', href: '#workspace' },
+    { name: 'Find Your Plan', href: '/#pricing' },
     { name: 'About Us', href: '/about' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: 'Contact Us', href: '/#contact' },
   ];
 
   const handleNavigation = (href: string) => {
     setIsOpen(false);
-    if (href.startsWith('#')) {
-      const element = document.querySelector(href);
+    const [route, hash] = href.split('#');
+    
+    if (route === '/') {
+      navigate(route);
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(`#${hash}`);
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }, 500); // Increased timeout to ensure page load
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } else if (route) {
+      navigate(route);
+      window.scrollTo(0, 0);
+    } else if (hash) {
+      const element = document.querySelector(`#${hash}`);
       if (element) {
         element.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
         });
       }
-    } else {
-      navigate(href);
-      window.scrollTo(0, 0);
     }
   };
 
@@ -53,10 +70,10 @@ const Navbar: React.FC = () => {
       {/* Navigation Items - Remaining Three Quarters */}
       <div className="hidden md:flex w-3/4">
         <a
-          href="#workspace"
+          href="/#pricing"
           onClick={(e) => {
             e.preventDefault();
-            handleNavigation('#workspace');
+            handleNavigation('/#pricing');
           }}
           className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
         >
@@ -73,10 +90,10 @@ const Navbar: React.FC = () => {
           About Us
         </a>
         <a
-          href="#contact"
+          href="/#contact"
           onClick={(e) => {
             e.preventDefault();
-            handleNavigation('#contact');
+            handleNavigation('/#contact');
           }}
           className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
         >
