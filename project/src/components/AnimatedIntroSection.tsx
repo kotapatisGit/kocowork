@@ -70,7 +70,7 @@ const AnimatedIntroSection: React.FC = () => {
   return (
     <div 
       ref={rootRef}
-      className="relative min-h-screen bg-founders-fire py-20" // Added padding to account for navbar
+      className="relative min-h-screen bg-blank-slate py-20" // Added padding to account for navbar
     >
       <div className="slide-section w-full h-full">
         <div className="absolute rounded-3xl inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" />

@@ -6,10 +6,8 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
     { name: 'Find Your Plan', href: '#workspace' },
     { name: 'Contact Us', href: '#contact' },
-    { name: 'FAQ', href: '#faq' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -25,32 +23,39 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex">
-      {/* Logo Section */}
-      <div className="bg-founders-fire px-6 py-4 flex items-center min-w-[200px]">
+      {/* Logo Section - First Third */}
+      <div className="w-1/3 bg-founders-fire px-6 py-1 flex items-center justify-center">
         <Logo 
-          width={40} 
-          height={40} 
+          width={70} 
+          height={70} 
           color="#FFF5EE"
           className="transition-colors duration-200"
         />
-        <span className="ml-2 text-2xl font-bold text-blank-slate">KOCOwork</span>
+        <span className="ml-2 text-4xl font-bold text-blank-slate">KOCOwork</span>
       </div>
 
-      {/* Navigation Items */}
-      <div className="hidden md:flex flex-1">
-        {navLinks.map((link, index) => (
-          <a
-            key={link.name}
-            href={link.href}
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection(link.href);
-            }}
-            className="flex-1 bg-blue-600 hover:bg-blue-600 text-blank-slate font-medium text-lg flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
-          >
-            {link.name}
-          </a>
-        ))}
+      {/* Navigation Items - Middle and Last Third */}
+      <div className="hidden md:flex w-2/3">
+        <a
+          href="#workspace"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('#workspace');
+          }}
+          className="w-1/2 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+        >
+          Find Your Plan
+        </a>
+        <a
+          href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('#contact');
+          }}
+          className="w-1/2 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+        >
+          Contact Us
+        </a>
       </div>
 
       {/* Mobile Menu Button */}

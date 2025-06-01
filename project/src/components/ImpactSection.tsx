@@ -7,7 +7,7 @@ const ImpactSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12">
           <div className="w-4 h-4 bg-founders-fire"></div>
-          <h2 className="text-xl font-semibold text-focus-black">Discover Our Impact</h2>
+          <h2 className="text-3xl font-bold text-focus-black">Discover Our Impact</h2>
         </div>
 
         {/* Main Content */}

@@ -98,12 +98,13 @@ const Hero: React.FC = () => {
           {/* Image Container */}
           <div className="w-full rounded-3xl overflow-hidden">
             <img 
-              src="https://images.pexels.com/photos/7147442/pexels-photo-7147442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              // src="https://images.pexels.com/photos/7147442/pexels-photo-7147442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src="../assets/images/hero image.jpg"
               alt="Office Space"
               className="w-full h-[85vh] object-cover"
             />
             {/* Overlay for better text visibility */}
-            <div className="absolute inset-0 bg-black bg-opacity-40 rounded-3xl" />
+            <div className="absolute inset-0 rounded-3xl" />
           </div>
 
           {/* Content Overlay */}
@@ -112,7 +113,7 @@ const Hero: React.FC = () => {
               {/* Text Content */}
               <div className="max-w-2xl">
                 <div className="flex flex-col gap-y-2">
-                  <h1 className="text-4xl md:text-6xl font-bold text-cream leading-tight">
+                  <h1 className="text-4xl md:text-6xl font-bold text-blank-slate leading-tight">
                     For every professional, for every team
                   </h1>
                   <div className="h-[80px] flex items-center">
@@ -140,17 +141,17 @@ const Hero: React.FC = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-4 w-[200px]">
-                <button className="group relative flex items-center justify-between w-full bg-focus-black hover:text-cream px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                  <span className="relative z-10 text-xl text-cream transition-colors duration-500 group-hover:text-cream">WhatsApp Us</span>
+                <button className="group relative flex items-center justify-between w-full bg-focus-black hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                  <span className="relative z-10 text-xl text-blank-slate transition-colors duration-500 group-hover:text-blank-slate">WhatsApp Us</span>
                   <div className="absolute right-0 w-14 h-full bg-focus-black flex items-center justify-center rounded-r-full">
-                    <ArrowRight className="w-5 h-5 text-cream relative z-10" />
+                    <ArrowRight className="w-5 h-5 text-blank-slate relative z-10" />
                   </div>
                   <div className="absolute w-14 h-full bg-blue-600 right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>
-                <button className="group relative flex items-center justify-between w-full bg-cream hover:text-cream px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                  <span className="relative z-10 text-xl text-focus-black transition-colors duration-500 group-hover:text-cream">Find Your Plan</span>
+                <button className="group relative flex items-center justify-between w-full bg-blank-slate hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                  <span className="relative z-10 text-xl text-focus-black transition-colors duration-500 group-hover:text-blank-slate">Find Your Plan</span>
                   <div className="absolute right-0 w-14 h-full bg-founders-fire flex items-center justify-center rounded-r-full">
-                    <ArrowRight className="w-5 h-5 text-cream relative z-10" />
+                    <ArrowRight className="w-5 h-5 text-blank-slate relative z-10" />
                   </div>
                   <div className="absolute w-14 h-full bg-founders-fire right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>

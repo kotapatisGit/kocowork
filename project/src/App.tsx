@@ -5,6 +5,7 @@ import AnimatedIntroSection from './components/AnimatedIntroSection';
 import SocialMediaSection from './components/SocialMediaSection';
 import ImpactSection from './components/ImpactSection';
 import FullscreenImageSection from './components/FullscreenImageSection';
+import AboutUs from './components/AboutUs';
 import PricingSection from './components/Pricing/PricingSection';
 import ContactForm from './components/Contact/ContactForm';
 import Footer from './components/Footer';
@@ -19,6 +20,7 @@ function App() {
       <SocialMediaSection />
       <ImpactSection />
       <FullscreenImageSection />
+      <AboutUs />
       <PricingSection />
       <ContactForm />
       <Footer />
