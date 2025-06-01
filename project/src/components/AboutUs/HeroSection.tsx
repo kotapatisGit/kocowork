@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isVisible }) => {
               Your Vision Deserves a Space
             </h1>
             <div className="relative">
-              <p className="text-xl md:text-2xl text-blank-slate leading-relaxed font-medium max-w-4xl mx-auto">
+              <p className="text-xl md:text-3xl text-blank-slate leading-relaxed font-medium max-w-4xl mx-auto">
                 KOCOwork is a space for all where individuals and businesses unite to flourish and build a better India. 
                 Whether you're a solo entrepreneur, a remote worker, or a growing company, our flexible working spaces 
                 are designed to help you thrive.

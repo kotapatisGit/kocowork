@@ -77,10 +77,10 @@ const AboutUs = () => {
       <div ref={sectionRefs.vision}>
         <VisionSection isVisible={isVisible.vision} />
       </div>
-
+{/* 
       <div ref={sectionRefs.differentiators}>
         <DifferentiatorsSection isVisible={isVisible.differentiators} />
-      </div>
+      </div> */}
 
       <div ref={sectionRefs.story}>
         <StorySection isVisible={isVisible.story} />
