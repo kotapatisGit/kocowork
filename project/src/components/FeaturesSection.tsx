@@ -83,7 +83,7 @@ const FeaturesSection: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="features-container relative">
           {/* Background with gradient and subtle pattern */}
-          <div className="absolute inset-0 rounded-[2.5rem] bg-legacy-green shadow-2xl overflow-hidden">
+          <div className="absolute inset-0 rounded-[2.5rem] bg-founders-fire shadow-2xl overflow-hidden">
             <div className="absolute inset-0 pattern-bg opacity-10"></div>
           </div>
           
@@ -91,7 +91,7 @@ const FeaturesSection: React.FC = () => {
           <div className="relative z-20 px-8 py-10 sm:px-12 lg:px-16">
             <div className="features-content">
               {/* Title with subtle text shadow */}
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black text-center mb-10 tracking-tight leading-none">
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-blank-slate text-center mb-10 tracking-tight leading-none">
                 Built into Every Plan
               </h2>
               
@@ -106,12 +106,12 @@ const FeaturesSection: React.FC = () => {
                     >
                       {/* Enhanced Checkmark */}
                       <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
-                        <svg className="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-blank-slate" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
                       {/* Feature Text with hover effect */}
-                      <span className="text-2xl text-black font-semibold tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
+                      <span className="text-2xl text-blank-slate font-semibold tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
                         {feature}
                       </span>
                     </div>
@@ -127,13 +127,13 @@ const FeaturesSection: React.FC = () => {
                     >
                       {/* Enhanced Checkmark */}
                       <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
-                        <svg className="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-blank-slate" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
                       {/* Feature Text with hover effect */}
-                      <span className="text-2xl font-semibold text-black tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
-                        {feature}
+                      <span className="text-2xl font-semibold text-blank-slate tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
+                        {feature}   
                       </span>
                     </div>
                   ))}
