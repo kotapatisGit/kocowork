@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         'founders-fire': '#FF4D3C',
+        'founders-fire-dark': '#E63E2E',
         'legacy-green': '#3CB371',
         'focus-black': '#1A1A1A',
         'blank-slate': '#FFF5EE',

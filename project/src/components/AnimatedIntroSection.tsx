@@ -70,22 +70,26 @@ const AnimatedIntroSection: React.FC = () => {
   return (
     <div 
       ref={rootRef}
-      className="relative min-h-screen bg-blank-slate py-20" // Added padding to account for navbar
+      className="relative min-h-[70vh] bg-blank-slate" // Added padding to account for navbar
     >
       <div className="slide-section w-full h-full">
         <div className="absolute rounded-3xl inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" />
         
         {/* Content */}
-        <div className="relative z-40 min-h-screen flex items-center px-8">
+        <div className="relative z-40 min-h-[70vh] flex items-center px-8">
           <div className="slide-text max-w-6xl">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-cream leading-tight tracking-tight">
-              Flexible shared office{' '}
-              <span className="block text-cream">and coworking space</span>
-              <span className="block text-cream">in Hyderabad</span>
-              <span className="block text-3xl text-cream md:text-5xl lg:text-6xl xl:text-7xl ">
-                near you.
-              </span>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-center flex flex-col items-center justify-center font-bold text-cream leading-tight tracking-tight">
+               Your Vision, Deserves a Space {' '}
             </h2>
+              <span className="block text-3xl text-cream md:text-5xl lg:text-6xl xl:text-7xl ">
+                Flexible offices, 
+              </span>
+              <span className="block text-3xl text-cream md:text-5xl lg:text-6xl xl:text-7xl ">
+               Cowork spaces
+              </span>
+              <span className="block text-3xl text-cream md:text-5xl lg:text-6xl xl:text-7xl ">
+              in Hyderabad
+              </span>
           </div>
         </div>
       </div>

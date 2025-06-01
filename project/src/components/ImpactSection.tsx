@@ -7,16 +7,15 @@ const ImpactSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12">
           <div className="w-4 h-4 bg-founders-fire"></div>
-          <h2 className="text-3xl font-bold text-focus-black">Discover Our Impact</h2>
+          <h2 className="text-3xl font-bold text-focus-black">the KOCOwork Impact</h2>
         </div>
 
         {/* Main Content */}
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-focus-black leading-tight max-w-6xl mx-auto">
-            At KOCOwork, success isn't just a promise. 
-            <span className="text-blue-500"> It's proven.</span> Our growing 
-            community, high client retention, and 
-            top-rated service speak for themselves
+            A community built on trust. 
+            <span className="text-blue-500"> Driven by results </span>
+            and proven by retention
           </h1>
         </div>
 
@@ -24,7 +23,7 @@ const ImpactSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20 ">
           {/* Star Rating */}
           <div className="text-center relative">
-            <div className="text-[130px] md:text-[160px] font-black leading-none tracking-tighter bg-gradient-to-b from-slate-100 to-slate-900 bg-clip-text text-transparent" style={{ fontFamily: "'Darker Grotesque', sans-serif" }}>
+            <div className="text-[130px] md:text-[160px] font-black leading-none tracking-tighter bg-black bg-clip-text text-transparent" style={{ fontFamily: "'Darker Grotesque', sans-serif" }}>
               4.9/5
             </div>
             <div className="w-full h-1.5 bg-gradient-to-r from-red-500 via-founders-fire to-red-400 mb-8"></div>
@@ -38,7 +37,7 @@ const ImpactSection: React.FC = () => {
 
           {/* Customers Served */}
           <div className="text-center relative">
-            <div className="text-[130px] md:text-[160px] font-black leading-none tracking-tighter bg-gradient-to-b from-slate-100 to-slate-900 bg-clip-text text-transparent" style={{ fontFamily: "'Darker Grotesque', sans-serif" }}>
+            <div className="text-[130px] md:text-[160px] font-black leading-none tracking-tighter bg-black bg-clip-text text-transparent" style={{ fontFamily: "'Darker Grotesque', sans-serif" }}>
               367+
             </div>
             <div className="w-full h-1.5 bg-gradient-to-r from-red-500 via-founders-fire to-red-400 mb-8"></div>
@@ -52,7 +51,7 @@ const ImpactSection: React.FC = () => {
 
           {/* Repeat Clients */}
           <div className="text-center relative">
-            <div className="text-[130px] md:text-[160px] font-black leading-none tracking-tighter bg-gradient-to-b from-slate-100 to-slate-900 bg-clip-text text-transparent" style={{ fontFamily: "'Darker Grotesque', sans-serif" }}>
+            <div className="text-[130px] md:text-[160px] font-black leading-none tracking-tighter bg-black bg-clip-text text-transparent" style={{ fontFamily: "'Darker Grotesque', sans-serif" }}>
               78%
             </div>
             <div className="w-full h-1.5 bg-gradient-to-r from-red-500 via-founders-fire to-red-400 mb-8"></div>

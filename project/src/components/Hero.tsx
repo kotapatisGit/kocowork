@@ -42,9 +42,9 @@ const Hero: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   
   const phrases = [
-    "enable productivity",
-    "foster innovation",
-    "build community",
+    "ambition meets opportunity",
+    "we build for tomorrow",
+    "ideas scale faster",
     "create success"
   ];
 
@@ -114,10 +114,10 @@ const Hero: React.FC = () => {
               <div className="max-w-2xl">
                 <div className="flex flex-col gap-y-2">
                   <h1 className="text-4xl md:text-6xl font-bold text-blank-slate leading-tight">
-                    For every professional, for every team
+                    At KOCOwork
                   </h1>
                   <div className="h-[80px] flex items-center">
-                    <span className="text-4xl md:text-7xl font-bold text-founders-fire leading-tight whitespace-nowrap inline-block">
+                    <span className="text-4xl md:text-6xl font-bold text-founders-fire leading-tight whitespace-nowrap inline-block">
                       {displayText.split('').map((letter, index) => (
                         <span
                           key={index}
@@ -141,19 +141,24 @@ const Hero: React.FC = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-4 w-[200px]">
-                <button className="group relative flex items-center justify-between w-full bg-focus-black hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                  <span className="relative z-10 text-xl text-blank-slate transition-colors duration-500 group-hover:text-blank-slate">WhatsApp Us</span>
+                <button 
+                  onClick={() => window.open('http://wa.me/message/TTIMWUTXNJHXC1', '_blank')}
+                  className="group relative flex items-center justify-between w-full bg-blank-slate hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+                >
+                  <span className="relative z-10 text-xl text-focus-black font-bold transition-colors duration-500 group-hover:text-blank-slate">WhatsApp Us</span>
                   <div className="absolute right-0 w-14 h-full bg-focus-black flex items-center justify-center rounded-r-full">
                     <ArrowRight className="w-5 h-5 text-blank-slate relative z-10" />
                   </div>
-                  <div className="absolute w-14 h-full bg-blue-600 right-0 group-hover:w-full transition-all duration-500 -z-0" />
+                  <div className="absolute w-14 h-full bg-legacy-green right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>
-                <button className="group relative flex items-center justify-between w-full bg-blank-slate hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                  <span className="relative z-10 text-xl text-focus-black transition-colors duration-500 group-hover:text-blank-slate">Find Your Plan</span>
+                <button
+                  onClick={() => window.open('http://maps.app.goo.gl/oTFFP61Pn8L22mFR7', '_blank')}
+                  className="group relative flex items-center justify-between w-full bg-focus-black hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                  <span className="relative z-10 text-xl font-bold text-blank-slate transition-colors duration-500 group-hover:text-blank-slate">Locate Us</span>
                   <div className="absolute right-0 w-14 h-full bg-founders-fire flex items-center justify-center rounded-r-full">
                     <ArrowRight className="w-5 h-5 text-blank-slate relative z-10" />
                   </div>
-                  <div className="absolute w-14 h-full bg-founders-fire right-0 group-hover:w-full transition-all duration-500 -z-0" />
+                  <div className="absolute w-14 h-full bg-signal-blue right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>
               </div>
             </div>

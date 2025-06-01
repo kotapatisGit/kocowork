@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AnimatedIntroSection from './components/AnimatedIntroSection';
@@ -10,21 +11,32 @@ import PricingSection from './components/Pricing/PricingSection';
 import ContactForm from './components/Contact/ContactForm';
 import Footer from './components/Footer';
 
-function App() {
-  // document.body.style.backgroundColor = '#FF462E'
+const MainPage = () => {
   return (
-    <div className="min-h-screen bg-founders-fire text-focus-black font-darker">
-      <Navbar />
+    <>
       <Hero />
       <AnimatedIntroSection />
-      <SocialMediaSection />
+      {/* <SocialMediaSection /> */}
       <ImpactSection />
       <FullscreenImageSection />
-      <AboutUs />
       <PricingSection />
       <ContactForm />
       <Footer />
-    </div>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-founders-fire text-focus-black font-darker">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
