@@ -6,6 +6,7 @@ import AnimatedIntroSection from './components/AnimatedIntroSection';
 import SocialMediaSection from './components/SocialMediaSection';
 import ImpactSection from './components/ImpactSection';
 import FullscreenImageSection from './components/FullscreenImageSection';
+import FeaturesSection from './components/FeaturesSection';
 import AboutUs from './components/AboutUs';
 import PricingSection from './components/Pricing/PricingSection';
 import ContactForm from './components/Contact/ContactForm';
@@ -19,6 +20,7 @@ const MainPage = () => {
       {/* <SocialMediaSection /> */}
       <ImpactSection />
       <FullscreenImageSection />
+      <FeaturesSection />
       <PricingSection />
       <ContactForm />
       <Footer />
