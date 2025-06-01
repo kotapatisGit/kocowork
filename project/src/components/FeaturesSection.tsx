@@ -111,7 +111,7 @@ const FeaturesSection: React.FC = () => {
                         </svg>
                       </div>
                       {/* Feature Text with hover effect */}
-                      <span className="text-2xl text-blank-slate font-semibold tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
+                      <span className="text-2xl text-blank-slate font-bold tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
                         {feature}
                       </span>
                     </div>
@@ -132,7 +132,7 @@ const FeaturesSection: React.FC = () => {
                         </svg>
                       </div>
                       {/* Feature Text with hover effect */}
-                      <span className="text-2xl font-semibold text-blank-slate tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
+                      <span className="text-2xl font-bold text-blank-slate tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
                         {feature}   
                       </span>
                     </div>
