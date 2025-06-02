@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
           <div className="absolute inset-0 flex items-end p-6 md:p-12">
             <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-0">
               {/* Text Content */}
-              <div className="max-w-full md:max-w-2xl">
+              <div className="hidden md:block max-w-full md:max-w-2xl">
                 <div className="flex flex-col gap-y-1 md:gap-y-2">
                   <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-blank-slate leading-tight">
                     At KOCOwork

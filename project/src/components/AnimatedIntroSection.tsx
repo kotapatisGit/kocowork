@@ -70,15 +70,15 @@ const AnimatedIntroSection: React.FC = () => {
   return (
     <div 
       ref={rootRef}
-      className="relative min-h-[70vh] bg-blank-slate" // Added padding to account for navbar
+      className="relative min-h-[50vh] md:min-h-[70vh] bg-blank-slate" // Added padding to account for navbar
     >
-      <div className="slide-section w-full h-full">
+      <div className="slide-section w-full h-[50vh] md:h-full">
         <div className="absolute rounded-3xl inset-0 bg-founders-fire" />
         
         {/* Content */}
-        <div className="relative z-40 min-h-[70vh] flex items-center px-8">
+        <div className="relative z-40 min-h-[50vh] md:min-h-[70vh] flex items-center px-8">
           <div className="slide-text max-w-6xl">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-center flex flex-col items-center justify-center font-bold text-cream leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl text-center flex flex-col items-center justify-center font-bold text-cream leading-tight tracking-tight">
                Your Vision, Deserves a Space {' '}
             </h2>
               <span className="block text-3xl text-cream md:text-5xl lg:text-6xl xl:text-7xl ">
