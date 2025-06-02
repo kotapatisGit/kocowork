@@ -8,7 +8,7 @@ const OpenDeskPass: React.FC = () => {
         <h4 className="text-3xl font-bold text-focus-black mb-4 font-darker">Open Desk Pass</h4>
         
         <div className="mb-6 flex items-baseline">
-          <span className="text-[2.75rem] font-bold text-focus-black font-darker">₹4999</span>
+          <span className="text-[2.75rem] font-bold text-focus-black font-darker">₹5999</span>
           <span className="text-focus-black text-xl font-semibold ml-2">/month</span>
         </div>
         

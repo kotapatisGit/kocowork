@@ -87,8 +87,8 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="hero-section relative min-h-screen bg-founders-fire">
-      <div className="relative min-h-screen flex flex-col pt-20">
+    <section className="hero-section relative h-[70vh] md:min-h-screen bg-founders-fire">
+      <div className="relative min-h-screen flex flex-col pt-20 md:pt-20">
         {/* Offer Banner */}
         <OfferBanner />
 
@@ -100,23 +100,23 @@ const Hero: React.FC = () => {
               // src="https://images.pexels.com/photos/7147442/pexels-photo-7147442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               src="/images/hero-image.jpeg"
               alt="Office Space"
-              className="w-full h-[85vh] object-cover"
+              className="w-full h-[55vh] md:h-[85vh] object-cover"
             />
             {/* Overlay for better text visibility */}
             <div className="absolute inset-0 rounded-3xl" />
           </div>
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 flex items-end p-12">
-            <div className="w-full flex justify-between items-end">
+          <div className="absolute inset-0 flex items-end p-6 md:p-12">
+            <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-0">
               {/* Text Content */}
-              <div className="max-w-2xl">
-                <div className="flex flex-col gap-y-2">
-                  <h1 className="text-4xl md:text-6xl font-bold text-blank-slate leading-tight">
+              <div className="max-w-full md:max-w-2xl">
+                <div className="flex flex-col gap-y-1 md:gap-y-2">
+                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-blank-slate leading-tight">
                     At KOCOwork
                   </h1>
-                  <div className="h-[80px] flex items-center">
-                    <span className="text-4xl md:text-6xl font-bold text-blank-slate leading-tight whitespace-nowrap inline-block">
+                  <div className="h-[50px] md:h-[80px] flex items-center">
+                    <span className="text-3xl md:text-4xl lg:text-6xl font-bold text-blank-slate leading-tight whitespace-nowrap inline-block">
                       {displayText.split('').map((letter, index) => (
                         <span
                           key={index}
@@ -139,25 +139,25 @@ const Hero: React.FC = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col gap-4 w-[200px]">
+              <div className="flex flex-col gap-3 md:gap-4 w-[80%] mx-0 md:mx-0 md:w-[200px]">
                 <button 
                   onClick={() => window.open('http://wa.me/message/TTIMWUTXNJHXC1', '_blank')}
-                  className="group relative flex items-center justify-between w-full bg-blank-slate hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+                  className="group relative flex items-center justify-between w-[30vh] md:w-full bg-blank-slate hover:text-blank-slate px-3 md:px-4 py-2 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
                 >
-                  <span className="relative z-10 text-xl text-focus-black font-bold transition-colors duration-500 group-hover:text-blank-slate">WhatsApp Us</span>
-                  <div className="absolute right-0 w-14 h-full bg-focus-black flex items-center justify-center rounded-r-full">
-                    <ArrowRight className="w-5 h-5 text-blank-slate relative z-10" />
+                  <span className="relative z-10 text-base md:text-lg lg:text-xl text-focus-black font-bold transition-colors duration-500 group-hover:text-blank-slate">WhatsApp Us</span>
+                  <div className="absolute right-0 w-10 md:w-12 h-full bg-focus-black flex items-center justify-center rounded-r-full">
+                    <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-blank-slate relative z-10" />
                   </div>
-                  <div className="absolute w-14 h-full bg-legacy-green right-0 group-hover:w-full transition-all duration-500 -z-0" />
+                  <div className="absolute w-10 md:w-12 h-full bg-legacy-green right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>
                 <button
                   onClick={() => window.open('http://maps.app.goo.gl/oTFFP61Pn8L22mFR7', '_blank')}
-                  className="group relative flex items-center justify-between w-full bg-focus-black hover:text-blank-slate px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                  <span className="relative z-10 text-xl font-bold text-blank-slate transition-colors duration-500 group-hover:text-blank-slate">Locate Us</span>
-                  <div className="absolute right-0 w-14 h-full bg-founders-fire flex items-center justify-center rounded-r-full">
-                    <ArrowRight className="w-5 h-5 text-blank-slate relative z-10" />
+                  className="group relative flex items-center justify-between w-[30vh] md:w-full bg-focus-black hover:text-blank-slate px-3 md:px-4 py-2 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                  <span className="relative z-10 text-base md:text-lg lg:text-xl font-bold text-blank-slate transition-colors duration-500 group-hover:text-blank-slate">Locate Us</span>
+                  <div className="absolute right-0 w-10 md:w-12 h-full bg-founders-fire flex items-center justify-center rounded-r-full">
+                    <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-blank-slate relative z-10" />
                   </div>
-                  <div className="absolute w-14 h-full bg-signal-blue right-0 group-hover:w-full transition-all duration-500 -z-0" />
+                  <div className="absolute w-10 md:w-12 h-full bg-signal-blue right-0 group-hover:w-full transition-all duration-500 -z-0" />
                 </button>
               </div>
             </div>

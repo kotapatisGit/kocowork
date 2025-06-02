@@ -52,76 +52,107 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex">
-      {/* Logo Section - First Quarter */}
-      <div 
-        onClick={handleLogoClick}
-        className="w-1/4 bg-founders-fire px-6 py-1 flex items-center justify-center cursor-pointer hover:bg-founders-fire-dark transition-colors duration-200"
-      >
-        <Logo 
-          width={70} 
-          height={70} 
-          color="#FFF5EE"
-          className="transition-colors duration-200"
-        />
-        <span className="ml-2 text-4xl font-bold text-blank-slate">KOCOwork</span>
-      </div>
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50 flex">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex w-full">
+          {/* Logo Section - First Quarter */}
+          <div 
+            onClick={handleLogoClick}
+            className="w-1/4 bg-founders-fire px-6 py-1 flex items-center justify-center cursor-pointer hover:bg-founders-fire-dark transition-colors duration-200"
+          >
+            <Logo 
+              width={70} 
+              height={70} 
+              color="#FFF5EE"
+              className="transition-colors duration-200"
+            />
+            <span className="ml-2 text-4xl font-bold text-blank-slate">KOCOwork</span>
+          </div>
 
-      {/* Navigation Items - Remaining Three Quarters */}
-      <div className="hidden md:flex w-3/4">
-        <a
-          href="/#pricing"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavigation('/#pricing');
-          }}
-          className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
-        >
-          Find Your Plan
-        </a>
-        <a
-          href="/about"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavigation('/about');
-          }}
-          className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
-        >
-          About Us
-        </a>
-        <a
-          href="/#contact"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavigation('/#contact');
-          }}
-          className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
-        >
-          Contact Us
-        </a>
-      </div>
+          {/* Navigation Items - Remaining Three Quarters */}
+          <div className="flex w-3/4">
+            <a
+              href="/#pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('/#pricing');
+              }}
+              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+            >
+              Find Your Plan
+            </a>
+            <a
+              href="/about"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('/about');
+              }}
+              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+            >
+              About Us
+            </a>
+            <a
+              href="/#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('/#contact');
+              }}
+              className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden flex items-center">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="p-4 bg-founders-fire"
-        >
-          {isOpen ? (
-            <X className="h-6 w-6 text-blank-slate" />
-          ) : (
-            <Menu className="h-6 w-6 text-blank-slate" />
-          )}
-        </button>
-      </div>
+        {/* Mobile Layout - Logo and Menu Button */}
+        <div className="md:hidden flex w-full items-center justify-between bg-founders-fire px-6 py-4">
+          {/* Logo and Company Name */}
+          <div 
+            onClick={handleLogoClick}
+            className="flex items-center cursor-pointer"
+          >
+            <Logo 
+              width={50} 
+              height={50} 
+              color="#FFF5EE"
+            />
+            <span className="ml-2 text-2xl font-bold text-blank-slate">KOCOwork</span>
+          </div>
 
-      {/* Mobile Menu */}
+          {/* Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 hover:bg-founders-fire-dark transition-colors duration-200 rounded"
+          >
+            {isOpen ? (
+              <X className="h-6 w-6 text-blank-slate" />
+            ) : (
+              <Menu className="h-6 w-6 text-blank-slate" />
+            )}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Sidebar */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-blue-500 transition-transform duration-300 transform ${
-          isOpen ? 'translate-y-0' : '-translate-y-full'
+        className={`md:hidden fixed top-0 right-0 h-full w-80 bg-founders-fire z-40 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col">
+        {/* Sidebar Header */}
+        <div className="flex items-center justify-between p-6 border-b border-blank-slate/20">
+          <span className="text-2xl font-bold text-blank-slate">Menu</span>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 hover:bg-founders-fire-dark transition-colors duration-200 rounded"
+          >
+            <X className="h-6 w-6 text-blank-slate" />
+          </button>
+        </div>
+
+        {/* Sidebar Navigation */}
+        <div className="flex flex-col py-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -130,14 +161,22 @@ const Navbar: React.FC = () => {
                 e.preventDefault();
                 handleNavigation(link.href);
               }}
-              className="text-blank-slate hover:bg-blue-600 transition-all duration-200 py-4 px-6 text-center text-lg font-medium transform hover:translate-y-[2px] hover:shadow-inner"
+              className="text-blank-slate hover:bg-founders-fire-dark transition-all duration-200 py-4 px-6 text-xl font-medium border-b border-blank-slate/10 last:border-b-0"
             >
               {link.name}
             </a>
           ))}
         </div>
       </div>
-    </nav>
+
+      {/* Mobile Overlay */}
+      {isOpen && (
+        <div
+          className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+    </>
   );
 };
 

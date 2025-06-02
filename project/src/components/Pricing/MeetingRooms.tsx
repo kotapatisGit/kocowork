@@ -9,9 +9,9 @@ const MeetingRooms: React.FC = () => {
   const capacityOptions: RoomCapacity[] = [4, 6, 8, 10];
   const pricePerHour: Record<RoomCapacity, number> = {
     4: 499,
-    6: 749,
-    8: 999,
-    10: 1249
+    6: 699,
+    8: 899,
+    10: 1099
   };
 
   return (
