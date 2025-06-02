@@ -45,7 +45,6 @@ const Hero: React.FC = () => {
     "ambition meets opportunity",
     "we build for tomorrow",
     "ideas scale faster",
-    "create success"
   ];
 
   const animateText = async (newText: string, direction: 'in' | 'out') => {
@@ -117,7 +116,7 @@ const Hero: React.FC = () => {
                     At KOCOwork
                   </h1>
                   <div className="h-[80px] flex items-center">
-                    <span className="text-4xl md:text-6xl font-bold text-founders-fire leading-tight whitespace-nowrap inline-block">
+                    <span className="text-4xl md:text-6xl font-bold text-blank-slate leading-tight whitespace-nowrap inline-block">
                       {displayText.split('').map((letter, index) => (
                         <span
                           key={index}

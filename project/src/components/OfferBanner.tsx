@@ -12,23 +12,20 @@ const OfferBanner: React.FC = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      // Get the stored end time or set a new one
-      let endTime = localStorage.getItem('offerEndTime');
-      if (!endTime) {
-        const newEndTime = new Date();
-        newEndTime.setDate(newEndTime.getDate() + 7);
-        endTime = newEndTime.getTime().toString();
-        localStorage.setItem('offerEndTime', endTime);
-      }
-
+      // Fixed start time - December 2024 (you can change this to when you want the timer to start)
+      const startTime = new Date('2025-06-02T00:00:00Z').getTime();
+      const cycleDuration = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+      
       const now = new Date().getTime();
-      const difference = parseInt(endTime) - now;
-
-      // If the countdown is finished, reset it to 7 days
-      if (difference <= 0) {
-        const newEndTime = new Date();
-        newEndTime.setDate(newEndTime.getDate() + 7);
-        localStorage.setItem('offerEndTime', newEndTime.getTime().toString());
+      const timeSinceStart = now - startTime;
+      
+      // Calculate which cycle we're in and how much time is left in current cycle
+      const currentCycle = Math.floor(timeSinceStart / cycleDuration);
+      const timeInCurrentCycle = timeSinceStart % cycleDuration;
+      const timeLeftInCycle = cycleDuration - timeInCurrentCycle;
+      
+      // If we're before the start time, show full 7 days
+      if (timeSinceStart < 0) {
         return {
           days: 7,
           hours: 0,
@@ -38,10 +35,10 @@ const OfferBanner: React.FC = () => {
       }
 
       return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        days: Math.floor(timeLeftInCycle / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((timeLeftInCycle % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((timeLeftInCycle % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((timeLeftInCycle % (1000 * 60)) / 1000)
       };
     };
 
