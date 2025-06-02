@@ -1,6 +1,5 @@
 import React from 'react';
 import { Heart, Building } from 'lucide-react';
-import bannerImage from '../../../assets/images/charminar.png';
 
 interface VisionSectionProps {
   isVisible: boolean;
@@ -30,7 +29,7 @@ const VisionSection: React.FC<VisionSectionProps> = ({ isVisible }) => {
           </div>
           <div className="lg:w-1/2">
             <img 
-              src={bannerImage} 
+              src="/images/charminar.png" 
               alt="KOCO Vision Banner" 
               className="w-full max-w-[40%] h-auto rounded-lg shadow-lg ml-auto"
             />

@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
           <div className="w-[95%] mx-auto rounded-3xl overflow-hidden">
             <img 
               // src="https://images.pexels.com/photos/7147442/pexels-photo-7147442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              src="../assets/images/hero-image.jpeg"
+              src="/images/hero-image.jpeg"
               alt="Office Space"
               className="w-full h-[85vh] object-cover"
             />

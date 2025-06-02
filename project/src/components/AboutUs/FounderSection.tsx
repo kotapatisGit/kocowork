@@ -1,6 +1,5 @@
 import React from 'react';
 import { Users } from 'lucide-react';
-import founderImage from '../../../assets/images/founder-pic.jpeg';
 
 interface FounderSectionProps {
   isVisible: boolean;
@@ -23,7 +22,7 @@ const FounderSection: React.FC<FounderSectionProps> = ({ isVisible }) => {
                   {/* Placeholder for founder's image */}
                   <img 
                     // src="@/assets/images/founder-pic.jpeg"
-                    src={founderImage}
+                    src="/images/founder-pic.jpeg"
                     alt="Vennela Keertana Kotapati, Founder of KOCO"
                     className="w-full h-full object-cover"
                     onError={(e) => {
