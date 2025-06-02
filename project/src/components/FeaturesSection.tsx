@@ -92,7 +92,7 @@ const FeaturesSection: React.FC = () => {
             <div className="features-content">
               {/* Title with subtle text shadow */}
               <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-blank-slate text-center mb-10 tracking-tight leading-none">
-                Built into Every Plan
+                Your KOCO Benefits
               </h2>
               
               {/* Features Grid with improved spacing and hover effects */}

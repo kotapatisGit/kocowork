@@ -94,12 +94,12 @@ const Hero: React.FC = () => {
         <OfferBanner />
 
         {/* Main Content Container */}
-        <div className="w-[95%] mx-auto relative">
+        <div className="w-full mx-auto relative">
           {/* Image Container */}
-          <div className="w-full rounded-3xl overflow-hidden">
+          <div className="w-[95%] mx-auto rounded-3xl overflow-hidden">
             <img 
               // src="https://images.pexels.com/photos/7147442/pexels-photo-7147442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              src="../assets/images/hero image.jpg"
+              src="../assets/images/hero-image.jpeg"
               alt="Office Space"
               className="w-full h-[85vh] object-cover"
             />

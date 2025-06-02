@@ -19,10 +19,6 @@ const OpenDeskPass: React.FC = () => {
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Open environment</span>
-          </li>
-          <li className="flex items-start">
-            <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
             <span className="text-focus-black font-semibold text-[1.05rem]">30 days of access</span>
           </li>
           <li className="flex items-start">
@@ -31,7 +27,7 @@ const OpenDeskPass: React.FC = () => {
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Valid for 1 month</span>
+            <span className="text-focus-black font-semibold text-[1.05rem]">Open environment</span>
           </li>
         </ul>
         

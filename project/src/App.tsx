@@ -9,6 +9,7 @@ import FullscreenImageSection from './components/FullscreenImageSection';
 import FeaturesSection from './components/FeaturesSection';
 import AboutUs from './components/AboutUs';
 import PricingSection from './components/Pricing/PricingSection';
+import FAQSection from './components/FAQSection';
 import ContactForm from './components/Contact/ContactForm';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ const MainPage = () => {
       <FullscreenImageSection />
       <FeaturesSection />
       <PricingSection />
+      <FAQSection />
       <ContactForm />
       <Footer />
     </>

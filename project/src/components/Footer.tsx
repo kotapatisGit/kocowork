@@ -1,107 +1,87 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Instagram, Twitter, Linkedin, Facebook, X, Youtube } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-focus-black text-blank-slate">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center mb-4">
-              <Logo width={28} height={28} color="#FFF5EE" />
-              <span className="ml-2 text-2xl font-bold text-blank-slate font-darker">KOCOwork</span>
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Company Info Section */}
+          <div className="space-y-6">
+            <div className="flex items-center">
+              <Logo width={32} height={32} color="#FFF5EE" />
+              <span className="ml-3 text-2xl font-bold text-blank-slate font-darker tracking-tight">KOCOwork</span>
             </div>
-            <p className="mb-4 text-blank-slate opacity-80">
+            <p className="text-blank-slate/80 text-md  leading-relaxed max-w-sm">
               Premium flexible workspaces designed for professionals, entrepreneurs, and growing businesses.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-blank-slate opacity-80 hover:text-founders-fire transition-colors duration-300">
+            <div className="flex items-center space-x-5 pt-2">
+              <a href="https://www.facebook.com/share/16GJdJC6KV/?mibextid=wwXIfr" 
+                className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-blank-slate opacity-80 hover:text-founders-fire transition-colors duration-300">
+              <a href="https://x.com/kocowork?s=21&t=tCseW9jkqBflh_N3ZOrvxA" 
+                className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-blank-slate opacity-80 hover:text-founders-fire transition-colors duration-300">
+              <a href="https://www.instagram.com/kocowork.co?igsh=czZ3MTE0ODNrNWE5" 
+                className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-blank-slate opacity-80 hover:text-founders-fire transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/106527623/admin/dashboard" 
+                className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
                 <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="https://www.youtube.com/@kocowork" 
+                className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold text-blank-slate mb-4 font-darker">Quick Links</h3>
-            <ul className="space-y-2">
-              {[
-                { name: 'Home', href: '#home' },
-                { name: 'Workspace Plans', href: '#workspace' },
-                { name: 'Virtual Office', href: '#virtual' },
-                { name: 'Contact Us', href: '#contact' },
-                { name: 'Terms & Conditions', href: '#' },
-                { name: 'Privacy Policy', href: '#' },
-              ].map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-blank-slate opacity-80 hover:text-founders-fire transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold text-blank-slate mb-4 font-darker">Contact Info</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-founders-fire mr-3 mt-1" />
-                <span className="text-blank-slate opacity-80">123 Business Avenue, Financial District, San Francisco, CA 94111</span>
+
+          {/* Contact Info Section */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-blank-slate font-darker">Contact Info</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start group">
+                <MapPin className="h-5 w-5 text-founders-fire mr-3 mt-1 flex-shrink-0 group-hover:text-founders-fire/80 transition-colors duration-300" />
+                <span className="text-blank-slate/80 text-md leading-relaxed">Plot No. 2, Champapet Rd, Nagarjuna Colony, Brundavan Nagar Colony, Hyderabad, Telangana 500079</span>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-founders-fire mr-3" />
-                <span className="text-blank-slate opacity-80">(123) 456-7890</span>
+              <li className="flex items-center group">
+                <Phone className="h-5 w-5 text-founders-fire mr-3 flex-shrink-0 group-hover:text-founders-fire/80 transition-colors duration-300" />
+                <span className="text-blank-slate/80 text-md hover:text-blank-slate transition-colors duration-300">
+                +91 9100109420
+                </span>
               </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-founders-fire mr-3" />
-                <span className="text-blank-slate opacity-80">info@kocowork.com</span>
+              <li className="flex items-center group">
+                <Mail className="h-5 w-5 text-founders-fire mr-3 flex-shrink-0 group-hover:text-founders-fire/80 transition-colors duration-300" />
+                <span className="text-blank-slate/80 text-md hover:text-blank-slate transition-colors duration-300">
+                  hello@kocowork.in
+                </span>
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold text-blank-slate mb-4 font-darker">Opening Hours</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Clock className="h-5 w-5 text-founders-fire mr-3 mt-1" />
+
+          {/* Opening Hours Section */}
+          <div className="lg:col-span-2 space-y-6">
+            <h3 className="text-xl font-semibold text-blank-slate font-darker">Opening Hours</h3>
+            <div className="bg-focus-black/30 p-8 rounded-lg backdrop-blur-sm w-[50%] border-2 border-founders-fire/50">
+              <div className="flex items-center space-x-4">
+                <Clock className="h-8 w-8 text-founders-fire" />
                 <div>
-                  <p className="font-medium">Monday - Friday</p>
-                  <p className="text-blank-slate opacity-80">7:00 AM - 9:00 PM</p>
+                  <p className="font-medium text-blank-slate text-lg">Open 24/7</p>
+                  <p className="text-blank-slate/70">Always available for our members</p>
                 </div>
-              </li>
-              <li className="flex items-start">
-                <Clock className="h-5 w-5 text-founders-fire mr-3 mt-1" />
-                <div>
-                  <p className="font-medium">Saturday</p>
-                  <p className="text-blank-slate opacity-80">9:00 AM - 6:00 PM</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <Clock className="h-5 w-5 text-founders-fire mr-3 mt-1" />
-                <div>
-                  <p className="font-medium">Sunday</p>
-                  <p className="text-blank-slate opacity-80">Closed</p>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-blank-slate opacity-80">
-          <p>© {new Date().getFullYear()} KOCOwork. All rights reserved.</p>
+
+        <div className="border-t border-gray-800/50 mt-16 pt-8 text-center">
+          <p className="text-blank-slate/60 text-sm">
+            © {new Date().getFullYear()} KOCOwork. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

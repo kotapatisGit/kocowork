@@ -20,6 +20,14 @@ const HalfDayPass: React.FC = () => {
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
             <span className="text-focus-black font-semibold text-[1.05rem]">4 hours of access</span>
           </li>
+          <li className="flex items-start">
+            <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
+            <span className="text-focus-black font-semibold text-[1.05rem]">Hot Desk</span>
+          </li>
+          <li className="flex items-start">
+            <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
+            <span className="text-focus-black font-semibold text-[1.05rem]">Shared environment</span>
+          </li>
         </ul>
         
         <a 
