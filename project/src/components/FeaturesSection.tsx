@@ -21,7 +21,6 @@ const FeaturesSection: React.FC = () => {
       animate('.features-content', {
         translateY: 50,
         scale: 0.95,
-        opacity: 0,
         duration: 0
       });
 
@@ -41,7 +40,6 @@ const FeaturesSection: React.FC = () => {
       animate('.features-content', {
         translateY: 0,
         scale: 1,
-        opacity: 1,
         duration: 1000,
         ease: 'out(3)',
         delay: 200,
@@ -96,13 +94,13 @@ const FeaturesSection: React.FC = () => {
               </h2>
               
               {/* Features Grid with improved spacing and hover effects */}
-              <div className="grid md:grid-cols-2 gap-x-20 gap-y-10 max-w-6xl px-40">
+              <div className="grid md:grid-cols-2 gap-x-20 gap-y-10 max-w-6xl px-4 md:px-40">
                 {/* Left Column */}
                 <div className="space-y-8">
                   {leftFeatures.map((feature, index) => (
                     <div 
                       key={index} 
-                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2"
+                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2 justify-center md:justify-start"
                     >
                       {/* Enhanced Checkmark */}
                       <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
@@ -111,7 +109,7 @@ const FeaturesSection: React.FC = () => {
                         </svg>
                       </div>
                       {/* Feature Text with hover effect */}
-                      <span className="text-2xl text-blank-slate font-bold tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
+                      <span className="text-xl md:text-2xl text-blank-slate font-bold tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
                         {feature}
                       </span>
                     </div>
@@ -123,7 +121,7 @@ const FeaturesSection: React.FC = () => {
                   {rightFeatures.map((feature, index) => (
                     <div 
                       key={index} 
-                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2"
+                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2 justify-center md:justify-start"
                     >
                       {/* Enhanced Checkmark */}
                       <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
@@ -132,7 +130,7 @@ const FeaturesSection: React.FC = () => {
                         </svg>
                       </div>
                       {/* Feature Text with hover effect */}
-                      <span className="text-2xl font-bold text-blank-slate tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
+                      <span className="text-xl md:text-2xl font-bold text-blank-slate tracking-wide group-hover:text-opacity-90 transition-colors duration-300">
                         {feature}   
                       </span>
                     </div>

@@ -51,7 +51,7 @@ const PrivateCabins: React.FC = () => {
               {privateCabinsFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-focus-black mr-3 flex-shrink-0 mt-1" />
-                  <span className="text-focus-black text-2xl font-bold opacity-90">{feature}</span>
+                  <span className="text-focus-black text-lg md:text-2xl font-bold opacity-90">{feature}</span>
                 </div>
               ))}
             </div>
@@ -64,7 +64,7 @@ const PrivateCabins: React.FC = () => {
                 {cabinHighlights.map((cabin, index) => (
                   <div key={index} className="border-b border-white border-opacity-20 last:border-0 pb-4 last:pb-0">
                     <h5 className="text-lg text-blank-slate font-semibold mb-2">{cabin.title}</h5>
-                    <p className="opacity-90 text-blank-slate text-xl font-semibold">{cabin.description}</p>
+                    <p className="opacity-90 text-blank-slate md:text-xl font-semibold">{cabin.description}</p>
                   </div>
                 ))}
               </div>
