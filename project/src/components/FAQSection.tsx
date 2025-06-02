@@ -237,7 +237,7 @@ const FAQSection: React.FC = () => {
                     y: -4,
                     transition: { type: "spring", stiffness: 400 }
                   }}
-                  className={`relative w-[70%] mx-auto bg-white/90 backdrop-blur-sm rounded-2xl border border-blank-slate/60 shadow-md overflow-hidden transition-all duration-400 ${
+                  className={`relative md:w-[70%] mx-auto bg-white/90 backdrop-blur-sm rounded-2xl border border-blank-slate/60 shadow-md overflow-hidden transition-all duration-400 ${
                     openFAQ === faq.id 
                       ? 'shadow-xl border-founders-fire/40 bg-white' 
                       : 'hover:shadow-lg hover:border-founders-fire/30'

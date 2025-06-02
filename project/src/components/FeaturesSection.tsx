@@ -100,7 +100,7 @@ const FeaturesSection: React.FC = () => {
                   {leftFeatures.map((feature, index) => (
                     <div 
                       key={index} 
-                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2 justify-center md:justify-start"
+                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2 justify-start md:justify-start"
                     >
                       {/* Enhanced Checkmark */}
                       <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
@@ -121,7 +121,7 @@ const FeaturesSection: React.FC = () => {
                   {rightFeatures.map((feature, index) => (
                     <div 
                       key={index} 
-                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2 justify-center md:justify-start"
+                      className="flex items-center space-x-4 group transition-transform duration-300 hover:translate-x-2 justify-start md:justify-start"
                     >
                       {/* Enhanced Checkmark */}
                       <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
