@@ -80,7 +80,7 @@ const OfferBanner: React.FC = () => {
             ) : (
               <>
                 <span className="text-xl font-bold text-gradient bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                  Upto 40% OFF
+                  Upto 25% OFF
                 </span>
                 <div className="grid grid-cols-4 gap-1 mt-1 text-gray-600">
                   <div className="flex flex-col items-center">
@@ -123,7 +123,7 @@ const OfferBanner: React.FC = () => {
           <div className="px-4 pb-4">
             <div className="text-center mb-3">
               <div className="text-2xl font-bold font-black text-gradient bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-1">
-                Upto 40% OFF
+                Upto 25% OFF
               </div>
               <p className="text-md text-focus-black font-semibold">
                 On select membership plans
