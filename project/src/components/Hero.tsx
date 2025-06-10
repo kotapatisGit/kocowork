@@ -102,6 +102,7 @@ const Hero: React.FC = () => {
                 src="/images/hero-image-min.jpeg"
                 alt="Office Space"
                 className="w-full h-[55vh] md:h-[85vh] object-cover"
+                loading="lazy"
               />
             </picture>
             {/* Overlay for better text visibility */}

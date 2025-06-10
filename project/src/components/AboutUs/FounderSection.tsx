@@ -26,6 +26,7 @@ const FounderSection: React.FC<FounderSectionProps> = ({ isVisible }) => {
                       src="/images/founder-pic-min.jpeg"
                       alt="Vennela Keertana Kotapati, Founder of KOCO"
                       className="w-full h-full object-cover"
+                      loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';

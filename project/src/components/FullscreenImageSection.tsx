@@ -34,6 +34,7 @@ const FullscreenImageSection: React.FC = () => {
               src="/images/workspace-image-min.jpeg"
               alt="Office Space"
               className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
             />
           </picture>
           {/* Gradient Overlay */}
