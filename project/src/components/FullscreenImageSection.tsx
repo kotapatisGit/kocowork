@@ -11,9 +11,6 @@ const FullscreenImageSection: React.FC = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-  // Placeholder image URL - replace with your actual image later
-  const imageUrl = "/images/workspace-image-min.jpeg";
-
   return (
     <motion.section 
       ref={ref}
@@ -31,11 +28,14 @@ const FullscreenImageSection: React.FC = () => {
         }}
       >
         <div className="relative w-full h-full">
-          <img
-            src={imageUrl}
-            alt="Office Space"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          <picture>
+            <source srcSet="/images/workspace-image-min.webp" type="image/webp" />
+            <img
+              src="/images/workspace-image-min.jpeg"
+              alt="Office Space"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </picture>
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
         </div>

@@ -20,17 +20,19 @@ const FounderSection: React.FC<FounderSectionProps> = ({ isVisible }) => {
               <div className="w-full">
                 <div className="aspect-square w-full max-w-[400px] mx-auto bg-gradient-to-br from-founders-fire/10 to-signal-blue/10 rounded-3xl overflow-hidden border-4 border-founders-fire/20 shadow-2xl">
                   {/* Placeholder for founder's image */}
-                  <img 
-                    // src="@/assets/images/founder-pic.jpeg"
-                    src="/images/founder-pic-min.jpeg"
-                    alt="Vennela Keertana Kotapati, Founder of KOCO"
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      target.nextElementSibling?.setAttribute('style', 'display: flex');
-                    }}
-                  />
+                  <picture>
+                    <source srcSet="/images/founder-pic-min.webp" type="image/webp" />
+                    <img 
+                      src="/images/founder-pic-min.jpeg"
+                      alt="Vennela Keertana Kotapati, Founder of KOCO"
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        target.nextElementSibling?.setAttribute('style', 'display: flex');
+                      }}
+                    />
+                  </picture>
                   {/* Fallback content */}
                   <div className="w-full h-full bg-gradient-to-br from-founders-fire to-signal-blue hidden items-center justify-center">
                     <div className="text-center text-blank-slate">

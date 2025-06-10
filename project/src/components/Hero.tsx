@@ -96,12 +96,14 @@ const Hero: React.FC = () => {
         <div className="w-full mx-auto relative">
           {/* Image Container */}
           <div className="w-[95%] mx-auto rounded-3xl overflow-hidden">
-            <img 
-              // src="https://images.pexels.com/photos/7147442/pexels-photo-7147442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              src="/images/hero-image-min.jpeg"
-              alt="Office Space"
-              className="w-full h-[55vh] md:h-[85vh] object-cover"
-            />
+            <picture>
+              <source srcSet="/images/hero-image-min.webp" type="image/webp" />
+              <img 
+                src="/images/hero-image-min.jpeg"
+                alt="Office Space"
+                className="w-full h-[55vh] md:h-[85vh] object-cover"
+              />
+            </picture>
             {/* Overlay for better text visibility */}
             <div className="absolute inset-0 rounded-3xl" />
           </div>
