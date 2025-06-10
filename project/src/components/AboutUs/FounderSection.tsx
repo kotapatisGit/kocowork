@@ -22,7 +22,7 @@ const FounderSection: React.FC<FounderSectionProps> = ({ isVisible }) => {
                   {/* Placeholder for founder's image */}
                   <img 
                     // src="@/assets/images/founder-pic.jpeg"
-                    src="/images/founder-pic.jpeg"
+                    src="/images/founder-pic-min.jpeg"
                     alt="Vennela Keertana Kotapati, Founder of KOCO"
                     className="w-full h-full object-cover"
                     onError={(e) => {

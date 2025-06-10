@@ -12,7 +12,7 @@ const FullscreenImageSection: React.FC = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   // Placeholder image URL - replace with your actual image later
-  const imageUrl = "/images/workspace-image.jpeg";
+  const imageUrl = "/images/workspace-image-min.jpeg";
 
   return (
     <motion.section 
