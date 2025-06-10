@@ -97,12 +97,17 @@ const Hero: React.FC = () => {
           {/* Image Container */}
           <div className="w-[95%] mx-auto rounded-3xl overflow-hidden">
             <picture>
-              <source srcSet="/images/hero-image-min.webp" type="image/webp" />
+              <source 
+                srcSet="/images/hero-image-min.webp" 
+                type="image/webp"
+              />
               <img 
                 src="/images/hero-image-min.jpeg"
                 alt="Office Space"
                 className="w-full h-[55vh] md:h-[85vh] object-cover"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
+                decoding="sync"
               />
             </picture>
             {/* Overlay for better text visibility */}
