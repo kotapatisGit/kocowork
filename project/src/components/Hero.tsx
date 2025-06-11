@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
                 alt="Office Space"
                 className="w-full h-[55vh] md:h-[85vh] object-cover"
                 loading="eager"
-                fetchPriority="high"
+                {...({ fetchpriority: "high" } as any)}
                 decoding="sync"
               />
             </picture>
