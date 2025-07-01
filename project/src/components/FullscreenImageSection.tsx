@@ -66,23 +66,6 @@ const FullscreenImageSection: React.FC = () => {
           </motion.p>
         </div>
       </motion.div>
-
-      {/* Scroll Indicator */}
-      {/* <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        animate={{ 
-          y: [0, 10, 0],
-        }}
-        transition={{ 
-          duration: 1.5,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <div className="w-8 h-12 border-2 border-white rounded-full flex justify-center pt-2">
-          <div className="w-1 h-3 bg-white rounded-full" />
-        </div>
-      </motion.div> */}
     </motion.section>
   );
 };

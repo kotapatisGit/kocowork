@@ -104,9 +104,6 @@ const ContactForm: React.FC = () => {
               Let's Start Your
               <span className="block text-founders-fire">Workspace Journey</span>
             </h2>
-            {/* <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Ready to transform your work experience? Get in touch with us and we'll help you find the perfect workspace solution tailored to your needs.
-            </p> */}
           </div>
 
           {submitted ? (

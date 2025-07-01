@@ -27,16 +27,6 @@ const StorySection: React.FC<StorySectionProps> = ({ isVisible }) => {
               our venture is part of a broader legacy of building sustainable, transformative businesses across 
               industries including real estate, glass manufacturing, education, and working spaces.
             </p>
-            
-            {/* <div className="flex items-center justify-center gap-6 mb-8">
-              <div className="w-2 h-2 bg-founders-fire rounded-full animate-pulse" />
-              <span className="text-blank-slate font-semibold text-lg">Integrity</span>
-              <div className="w-2 h-2 bg-signal-blue rounded-full animate-pulse" />
-              <span className="text-blank-slate font-semibold text-lg">Innovation</span>
-              <div className="w-2 h-2 bg-legacy-green rounded-full animate-pulse" />
-              <span className="text-blank-slate font-semibold text-lg">Inclusive Growth</span>
-              <div className="w-2 h-2 bg-founders-fire rounded-full animate-pulse" />
-            </div> */}
           </div>
         </div>
       </div>

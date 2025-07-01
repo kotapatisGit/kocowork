@@ -1,5 +1,4 @@
 import React from 'react';
-import { Heart, Building } from 'lucide-react';
 
 interface VisionSectionProps {
   isVisible: boolean;

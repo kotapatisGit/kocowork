@@ -54,11 +54,9 @@ const FounderSection: React.FC<FounderSectionProps> = ({ isVisible }) => {
             </h2>
 
             <div className="relative">
-              {/* <div className="text-6xl text-founders-fire/20">"</div> */}
               <blockquote className="text-2xl md:text-3xl font-bold text-focus-black leading-relaxed italic mb-8 relative z-10">
                 KOCO is built on one idea: together we grow and build a better India
               </blockquote>
-              {/* <div className="text-6xl text-founders-fire/20 absolute -bottom-4 -right-2">"</div> */}
             </div>
             
             <div className="flex items-center gap-4 mt-12">

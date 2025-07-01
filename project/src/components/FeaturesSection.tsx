@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { animate, createScope, onScroll } from 'animejs';
-import './FeaturesSection.css';
 
 const FeaturesSection: React.FC = () => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -9,7 +8,7 @@ const FeaturesSection: React.FC = () => {
   useEffect(() => {
     if (!rootRef.current) return;
 
-    scope.current = createScope({ root: rootRef.current }).add((scope) => {
+    scope.current = createScope({ root: rootRef.current }).add(() => {
       // Initial setup
       animate('.features-container', {
         translateY: '100px',
@@ -82,7 +81,6 @@ const FeaturesSection: React.FC = () => {
         <div className="features-container relative">
           {/* Background with gradient and subtle pattern */}
           <div className="absolute inset-0 rounded-[2.5rem] bg-founders-fire shadow-2xl overflow-hidden">
-            <div className="absolute inset-0 pattern-bg opacity-10"></div>
           </div>
           
           {/* Content wrapper */}

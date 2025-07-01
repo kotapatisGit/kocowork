@@ -23,10 +23,6 @@ const KOCOVirtual: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto bg-blank-slate rounded-2xl overflow-hidden shadow-2xl">
-      {/* <div className="bg-founders-fire text-blank-slate text-center py-3 px-4 text-lg font-semibold">
-        Most Popular
-      </div> */}
-      
       <div className="p-8 md:p-12">
         <div className="text-center mb-8">
           <h3 className="text-6xl font-bold text-focus-black mb-6">KOCO Virtual</h3>

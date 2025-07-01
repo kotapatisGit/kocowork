@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle, Sparkles, ArrowRight } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 interface FAQ {
   id: number;
@@ -14,8 +14,8 @@ const FAQSection: React.FC = () => {
   const faqs: FAQ[] = [
     {
       id: 1,
-      question: "What are KOCO’s operating hours?",
-      answer: "KOCO is open 24/7, all year round, for members — whether you’re an early riser or a night owl."
+      question: "What are KOCO\'s operating hours?",
+      answer: "KOCO is open 24/7, all year round, for members — whether you\'re an early riser or a night owl."
     },
     {
       id: 2,
@@ -350,53 +350,6 @@ const FAQSection: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Enhanced Call to Action */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-16"
-        >
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-founders-fire via-signal-blue to-core-stack rounded-2xl blur-lg opacity-15 animate-pulse"></div>
-            
-            <div className="relative bg-gradient-to-br from-founders-fire to-founders-fire-dark rounded-2xl p-8 md:p-10 text-blank-slate overflow-hidden">
-              <div className="absolute top-3 right-3 w-16 h-16 bg-white/8 rounded-full blur-xl"></div>
-              <div className="absolute bottom-3 left-3 w-12 h-12 bg-white/8 rounded-full blur-xl"></div>
-              
-              <div className="relative text-center">
-                <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="inline-block mb-4"
-                >
-                  <HelpCircle className="w-12 h-12 text-blank-slate/25" />
-                </motion.div>
-                
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">
-                  Still have questions?
-                </h3>
-                <p className="text-lg mb-6 opacity-90 max-w-xl mx-auto font-semibold">
-                  Our team is here to help you find the perfect workspace solution.
-                </p>
-                
-                <motion.button
-                  whileHover={{ 
-                    scale: 1.03,
-                    boxShadow: "0 15px 30px rgba(0,0,0,0.15)"
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  className="group bg-blank-slate text-founders-fire px-8 py-3 rounded-full font-bold text-lg hover:bg-opacity-95 transition-all duration-300 inline-flex items-center gap-2"
-                >
-                  Contact Our Team
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </motion.button>
-              </div>
-            </div>
-          </div>
-        </motion.div> */}
       </div>
     </div>
   );

@@ -19,12 +19,9 @@ const OfferBanner: React.FC = () => {
       const now = new Date().getTime();
       const timeSinceStart = now - startTime;
       
-      // Calculate which cycle we're in and how much time is left in current cycle
-      const currentCycle = Math.floor(timeSinceStart / cycleDuration);
       const timeInCurrentCycle = timeSinceStart % cycleDuration;
       const timeLeftInCycle = cycleDuration - timeInCurrentCycle;
-      
-      // If we're before the start time, show full 7 days
+
       if (timeSinceStart < 0) {
         return {
           days: 7,
@@ -122,22 +119,13 @@ const OfferBanner: React.FC = () => {
         <div className={`transition-all duration-300 ease-in-out ${isExpanded ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0'} overflow-hidden`}>
           <div className="px-4 pb-4">
             <div className="text-center mb-3">
-              <div className="text-2xl font-bold font-black text-gradient bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-1">
+              <div className="text-2xl font-bold text-gradient bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-1">
                 Upto 25% OFF
               </div>
               <p className="text-md text-focus-black font-semibold">
                 On select membership plans
               </p>
             </div>
-
-            {/* <div className="space-y-1 mb-4">
-              {['Monthly Pass', 'Flexi Pass', 'Private Cabins'].map((plan, index) => (
-                <div key={index} className="flex items-center gap-2 text-xs">
-                  <div className="w-1.5 h-1.5 bg-gradient-to-r from-orange-400 to-red-500 rounded-full" />
-                  <span className="text-focus-black font-semibold text-sm">{plan}</span>
-                </div>
-              ))}
-            </div> */}
 
             <button 
               onClick={(e) => {

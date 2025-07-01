@@ -8,7 +8,7 @@ const AnimatedIntroSection: React.FC = () => {
   useEffect(() => {
     if (!rootRef.current) return;
 
-    scope.current = createScope({ root: rootRef.current }).add((scope) => {
+    scope.current = createScope({ root: rootRef.current }).add(() => {
       // Initial setup
       animate('.slide-section', {
         translateY: '100px',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, Instagram, Twitter, Linkedin, Facebook, X, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Instagram, Twitter, Linkedin, Facebook, Youtube } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
@@ -42,7 +42,6 @@ const Footer: React.FC = () => {
 
           {/* Contact Info Section */}
           <div className="space-y-6 md:flex-1 md:flex md:flex-col md:items-center">
-            {/* <h3 className="text-xl font-semibold text-blank-slate font-darker">Contact Info</h3> */}
             <ul className="space-y-4">
               <li className="flex items-start group">
                 <MapPin className="h-5 w-5 text-founders-fire mr-3 mt-1 flex-shrink-0 group-hover:text-founders-fire/80 transition-colors duration-300" />
@@ -65,7 +64,6 @@ const Footer: React.FC = () => {
 
           {/* Opening Hours Section */}
           <div className="space-y-6 md:flex-1 md:flex md:flex-col md:items-end">
-            {/* <h3 className="text-xl text-left md:text-center  font-semibold text-blank-slate font-darker">Opening Hours</h3> */}
             <div className="bg-focus-black/30 p-8 rounded-lg backdrop-blur-sm w-full md:w-[80%] border-2 border-founders-fire/50">
               <div className="flex items-center space-x-4">
                 <Clock className="h-8 w-8 text-founders-fire" />

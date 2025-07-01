@@ -1,9 +1,7 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AnimatedIntroSection from './components/AnimatedIntroSection';
-import SocialMediaSection from './components/SocialMediaSection';
 import ImpactSection from './components/ImpactSection';
 import FullscreenImageSection from './components/FullscreenImageSection';
 import FeaturesSection from './components/FeaturesSection';
@@ -18,7 +16,6 @@ const MainPage = () => {
     <>
       <Hero />
       <AnimatedIntroSection />
-      {/* <SocialMediaSection /> */}
       <ImpactSection />
       <FullscreenImageSection />
       <FeaturesSection />

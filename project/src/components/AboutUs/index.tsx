@@ -1,7 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import HeroSection from './HeroSection';
 import VisionSection from './VisionSection';
-import DifferentiatorsSection from './DifferentiatorsSection';
 import StorySection from './StorySection';
 import FounderSection from './FounderSection';
 
@@ -77,10 +76,6 @@ const AboutUs = () => {
       <div ref={sectionRefs.vision}>
         <VisionSection isVisible={isVisible.vision} />
       </div>
-{/* 
-      <div ref={sectionRefs.differentiators}>
-        <DifferentiatorsSection isVisible={isVisible.differentiators} />
-      </div> */}
 
       <div ref={sectionRefs.story}>
         <StorySection isVisible={isVisible.story} />

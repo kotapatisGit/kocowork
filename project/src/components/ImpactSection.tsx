@@ -56,11 +56,11 @@ const ImpactSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-focus-black leading-tight max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-focus-black leading-tight max-w-6xl mx-auto">
             A community built on trust. 
             <span className="text-signal-blue"> Driven by results </span>
             and proven by retention
-          </h1>
+          </h2>
         </motion.div>
 
         {/* Statistics Row */}
