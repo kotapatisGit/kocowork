@@ -207,7 +207,7 @@ const FAQSection: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="text-lg text-focus-black font-semibold max-w-3xl mx-auto leading-relaxed"
+            className="text-lg lg:text-2xl text-focus-black font-semibold max-w-3xl mx-auto leading-relaxed"
           >
             Everything you need to know about KOCOwork amenities, plans, and more.
           </motion.p>
@@ -269,7 +269,7 @@ const FAQSection: React.FC = () => {
                         </div>
                         
                         {/* Question Text */}
-                        <h3 className={`text-lg md:text-xl font-semibold transition-colors duration-300 ${
+                        <h3 className={`text-lg md:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
                           openFAQ === faq.id 
                             ? 'text-signal-blue' 
                             : 'text-focus-black group-hover:text-signal-blue'
@@ -336,7 +336,7 @@ const FAQSection: React.FC = () => {
                               initial={{ opacity: 0, y: 8 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.3, delay: 0.2 }}
-                              className="text-base text-focus-black/80 font-semibold leading-relaxed"
+                              className="text-base lg:text-xl text-md text-focus-black/80 font-semibold leading-relaxed"
                             >
                               {faq.answer}
                             </motion.p>

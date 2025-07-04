@@ -127,8 +127,8 @@ const ContactForm: React.FC = () => {
           ) : (
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
               <div className="bg-founders-fire p-8 text-center">
-                <h3 className="text-2xl font-bold text-white font-darker">Get Started Today</h3>
-                <p className="text-white text-lg font-semibold mt-2">Fill out the form below and we'll be in touch</p>
+                <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-darker">Get Started Today</h3>
+                <p className="text-white text-lg lg:text-xl xl:text-2xl font-semibold mt-2">Fill out the form below and we'll be in touch</p>
               </div>
 
               <form onSubmit={handleSubmit} className="p-8 space-y-6">
@@ -155,7 +155,7 @@ const ContactForm: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg"
+                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg lg:text-xl xl:text-2xl"
                     placeholder="Your Full Name"
                   />
                 </div>
@@ -173,7 +173,7 @@ const ContactForm: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg"
+                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg lg:text-xl xl:text-2xl"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -188,7 +188,7 @@ const ContactForm: React.FC = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg"
+                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg lg:text-xl xl:text-2xl"
                       placeholder="Your Phone Number"
                     />
                   </div>
@@ -205,7 +205,7 @@ const ContactForm: React.FC = () => {
                     value={formData.plan}
                     onChange={handleChange}
                     required
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg appearance-none bg-white"
+                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg lg:text-xl xl:text-2xl appearance-none bg-white"
                   >
                     <option value="">Select Your Preferred Plan</option>
                     <optgroup label="Workspace Plans">
@@ -233,7 +233,7 @@ const ContactForm: React.FC = () => {
                 {/* Message Field */}
                 <div className="relative">
                   <div className="absolute top-4 left-4 pointer-events-none">
-                    <MessageSquare className="h-5 w-5 text-gray-400" />
+                    {/* <MessageSquare className="h-5 w-5 xl:h-8 xl:w-8 lg:my-3 text-gray-400" /> */}
                   </div>
                   <textarea
                     id="message"
@@ -242,7 +242,7 @@ const ContactForm: React.FC = () => {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg resize-none"
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-founders-fire focus:ring-2 focus:ring-founders-fire/20 transition-all duration-300 text-lg lg:text-xl xl:text-2xl resize-none"
                     placeholder="Tell us about your specific requirements, team size, preferred location, or any special needs..."
                   ></textarea>
                 </div>
@@ -251,7 +251,7 @@ const ContactForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full flex items-center justify-center gap-3 bg-founders-fire text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg ${
+                  className={`w-full flex items-center justify-center gap-3 bg-founders-fire text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg lg:text-xl xl:text-2xl ${
                     loading ? 'opacity-75 cursor-not-allowed scale-100' : ''
                   }`}
                 >
@@ -265,14 +265,14 @@ const ContactForm: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Send className="h-6 w-6" />
+                      <Send className="h-6 w-6 lg:h-8 lg:w-8 text-xl lg:text-2xl xl:text-3xl" />
                       Send Message & Get Quote
                     </>
                   )}
                 </button>
 
                 {/* Additional Info */}
-                <p className="text-center text-gray-500 text-sm">
+                <p className="text-center text-gray-500 text-sm lg:text-lg xl:text-xl">
                   By submitting this form, you agree to be contacted by our team regarding your workspace requirements.
                 </p>
               </form>

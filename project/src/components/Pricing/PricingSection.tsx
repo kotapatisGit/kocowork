@@ -30,8 +30,8 @@ const PricingSection: React.FC = () => {
               onClick={() => setActiveCategory('workspace')}
               className={`px-6 py-3 text-sm font-medium rounded-md transition-all duration-300 ${
                 activeCategory === 'workspace' 
-                  ? 'bg-founders-fire font-semibold text-xl text-white shadow-sm' 
-                  : 'text-focus-black hover:text-gray-900'
+                  ? 'bg-founders-fire font-semibold text-xl lg:text-2xl text-white shadow-sm' 
+                  : 'text-focus-black hover:text-gray-900 lg:text-xl'
               }`}
             >
               Workspace Plans
@@ -40,8 +40,8 @@ const PricingSection: React.FC = () => {
               onClick={() => setActiveCategory('virtual')}
               className={`px-6 py-3 text-sm font-medium rounded-md transition-all duration-300 ${
                 activeCategory === 'virtual' 
-                  ? 'bg-founders-fire font-semibold text-xl text-white shadow-sm' 
-                  : 'text-focus-black hover:text-gray-900'
+                  ? 'bg-founders-fire font-semibold text-xl lg:text-2xl text-white shadow-sm' 
+                  : 'text-focus-black hover:text-gray-900 lg:text-xl'
               }`}
             >
               Virtual Office
@@ -52,17 +52,24 @@ const PricingSection: React.FC = () => {
         {/* Workspace Plans */}
         {activeCategory === 'workspace' && (
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               <DayPass />
               <HalfDayPass />
               <MeetingRooms />
-              <MonthlyPass />
-              <FlexiPass />
-              <OpenDeskPass />
+            </div>
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="w-full md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]">
+                <MonthlyPass />
+              </div>
+              <div className="w-full md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]">
+                <OpenDeskPass />
+              </div>
             </div>
 
             {/* Private Cabins - Large Component */}
-            <PrivateCabins />
+            <div className="mt-12">
+              <PrivateCabins />
+            </div>
           </div>
         )}
 

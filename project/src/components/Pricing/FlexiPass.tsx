@@ -52,19 +52,19 @@ const FlexiPass: React.FC = () => {
         <ul className="space-y-3 mb-8">
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-2 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold">Hot Desk</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Hot Desk</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-2 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold">30 Days of Access</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">30 Days of Access</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-2 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold">Upto 8 hours of Usage per day</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Upto 8 hours of Usage per day</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-2 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold">Valid for {selectedPlan.months} months</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Valid for {selectedPlan.months} months</span>
           </li>
         </ul>
         
@@ -87,7 +87,7 @@ const FlexiPass: React.FC = () => {
               contactForm.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="block w-full text-center py-2 px-4 rounded-md font-medium transition-colors duration-300 bg-founders-fire hover:bg-opacity-90 text-blank-slate"
+          className="block w-full text-center py-2 px-4 rounded-md font-medium transition-colors duration-300 bg-founders-fire hover:bg-opacity-90 text-blank-slate text-lg lg:text-xl"
         >
           Get Started
         </a>

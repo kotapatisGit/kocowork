@@ -48,15 +48,15 @@ const MeetingRooms: React.FC = () => {
         <ul className="space-y-4 mb-8 flex-1">
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Professional setup with 65 inch OLED display</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Professional setup with 65 inch OLED display</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Whiteboard & flipchart included</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Whiteboard & flipchart included</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Complimentary refreshments</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Complimentary refreshments</span>
           </li>
         </ul>
         
@@ -77,7 +77,7 @@ const MeetingRooms: React.FC = () => {
               contactForm.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="block w-full text-center py-3 px-4 rounded-md font-semibold transition-colors duration-300 bg-blank-slate border-2 border-founders-fire hover:bg-founders-fire hover:text-blank-slate text-focus-black text-lg mt-auto"
+          className="block w-full text-center py-3 px-4 rounded-md font-semibold transition-colors duration-300 bg-blank-slate border-2 border-founders-fire hover:bg-founders-fire hover:text-blank-slate text-focus-black text-lg lg:text-xl mt-auto"
         >
           Get Started
         </a>

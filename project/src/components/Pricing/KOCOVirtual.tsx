@@ -95,7 +95,7 @@ const KOCOVirtual: React.FC = () => {
                 contactForm.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="inline-block bg-founders-fire text-blank-slate font-semibold py-4 px-8 rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
+            className="inline-block bg-founders-fire text-blank-slate font-semibold py-4 px-8 rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg lg:text-xl"
           >
             Get Started
           </a>

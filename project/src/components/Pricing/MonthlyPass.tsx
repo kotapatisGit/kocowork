@@ -15,19 +15,19 @@ const MonthlyPass: React.FC = () => {
         <ul className="space-y-4 mb-8 flex-1">
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Dedicated Desk</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Dedicated Desk</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">30 Days of Access</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">30 Days of Access</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Upto 8 hours of Usage per day</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Upto 8 hours of Usage per day</span>
           </li>
           <li className="flex items-start">
             <Check className="h-5 w-5 text-legacy-green mr-3 flex-shrink-0 mt-0.5" />
-            <span className="text-focus-black font-semibold text-[1.05rem]">Shared Cabins</span>
+            <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Shared Cabins</span>
           </li>
         </ul>
         
@@ -48,7 +48,7 @@ const MonthlyPass: React.FC = () => {
               contactForm.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="block w-full text-center py-3 px-4 rounded-md font-semibold transition-colors duration-300 bg-blank-slate border-2 border-founders-fire hover:bg-founders-fire hover:text-blank-slate text-focus-black text-lg mt-auto"
+          className="block w-full text-center py-3 px-4 rounded-md font-semibold transition-colors duration-300 bg-blank-slate border-2 border-founders-fire hover:bg-founders-fire hover:text-blank-slate text-focus-black text-lg lg:text-xl mt-auto"
         >
           Get Started
         </a>

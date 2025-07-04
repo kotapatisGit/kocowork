@@ -57,7 +57,7 @@ const FullscreenImageSection: React.FC = () => {
             Experience Modern Workspaces
           </motion.h2>
           <motion.p 
-            className="text-xl md:text-2xl opacity-90"
+            className="text-xl md:text-2xl lg:text-3xl opacity-90"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}

@@ -120,11 +120,11 @@ const Hero: React.FC = () => {
               {/* Text Content */}
               <div className="hidden md:block max-w-full md:max-w-2xl">
                 <div className="flex flex-col gap-y-1 md:gap-y-2">
-                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-blank-slate leading-tight">
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl lg:ml-10 font-bold text-blank-slate leading-tight">
                     At KOCOwork
                   </h1>
                   <div className="h-[50px] md:h-[80px] flex items-center">
-                    <span className="text-3xl md:text-4xl lg:text-6xl font-bold text-blank-slate leading-tight whitespace-nowrap inline-block">
+                    <span className="text-3xl md:text-5xl lg:text-6xl lg:ml-10 font-bold text-blank-slate leading-tight whitespace-nowrap inline-block">
                       {displayText.split('').map((letter, index) => (
                         <span
                           key={index}
@@ -147,12 +147,12 @@ const Hero: React.FC = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col gap-3 md:gap-4 w-[80%] mx-0 md:mx-0 md:w-[200px]">
+              <div className="flex flex-col gap-3 md:gap-4 w-[80%] mx-0 md:mx-0 md:w-[200px] lg:w-[300px] lg:mr-10">
                 <button 
                   onClick={() => window.open('http://wa.me/message/TTIMWUTXNJHXC1', '_blank')}
-                  className="group relative flex items-center justify-between w-[30vh] md:w-full bg-blank-slate hover:text-blank-slate px-3 md:px-4 py-2 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+                  className="group relative flex items-center justify-between w-[30vh] md:w-full bg-blank-slate hover:text-blank-slate px-3 md:px-4 py-2 md:py-2.5 lg:py-4 lg:px-6 rounded-full text-sm md:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
                 >
-                  <span className="relative z-10 text-base md:text-lg lg:text-xl text-focus-black font-bold transition-colors duration-500 group-hover:text-blank-slate">WhatsApp Us</span>
+                  <span className="relative z-10 text-base md:text-lg lg:text-2xl text-focus-black font-bold transition-colors duration-500 group-hover:text-blank-slate">WhatsApp Us</span>
                   <div className="absolute right-0 w-10 md:w-12 h-full bg-focus-black flex items-center justify-center rounded-r-full">
                     <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-blank-slate relative z-10" />
                   </div>
@@ -160,8 +160,8 @@ const Hero: React.FC = () => {
                 </button>
                 <button
                   onClick={() => window.open('http://maps.app.goo.gl/oTFFP61Pn8L22mFR7', '_blank')}
-                  className="group relative flex items-center justify-between w-[30vh] md:w-full bg-focus-black hover:text-blank-slate px-3 md:px-4 py-2 md:py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                  <span className="relative z-10 text-base md:text-lg lg:text-xl font-bold text-blank-slate transition-colors duration-500 group-hover:text-blank-slate">Locate Us</span>
+                  className="group relative flex items-center justify-between w-[30vh] md:w-full bg-focus-black hover:text-blank-slate px-3 md:px-4 py-2 md:py-2.5 lg:py-4 lg:px-6 rounded-full text-sm md:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                  <span className="relative z-10 text-base md:text-lg lg:text-2xl font-bold text-blank-slate transition-colors duration-500 group-hover:text-blank-slate">Locate Us</span>
                   <div className="absolute right-0 w-10 md:w-12 h-full bg-founders-fire flex items-center justify-center rounded-r-full">
                     <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-blank-slate relative z-10" />
                   </div>
