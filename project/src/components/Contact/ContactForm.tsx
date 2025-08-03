@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle, Mail, Phone, User, MessageSquare, Package, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle, Mail, Phone, User, Package, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { emailConfig } from '../../config/email';
 
@@ -92,14 +92,11 @@ const ContactForm: React.FC = () => {
   const virtualPlans = plans.filter(plan => plan.category === 'Virtual Office');
 
   return (
-    <section id="contact" className="py-20 bg-focus-black">
+    <section id="contact" className="bg-focus-black">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-founders-fire rounded-full mb-6">
-              <Mail className="w-8 h-8 text-white" />
-            </div>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-blank-slate font-darker">
               Let's Start Your
               <span className="block text-founders-fire">Workspace Journey</span>

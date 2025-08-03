@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AnimatedIntroSection from './components/AnimatedIntroSection';
 import ImpactSection from './components/ImpactSection';
@@ -9,13 +8,13 @@ import AboutUs from './components/AboutUs';
 import PricingSection from './components/Pricing/PricingSection';
 import FAQSection from './components/FAQSection';
 import ContactForm from './components/Contact/ContactForm';
-import Footer from './components/Footer';
+import ContactUsPage from './components/Contact/ContactUsPage';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-founders-fire text-focus-black font-darker">
-        <Navbar />
+      <Layout>
         <Routes>
           <Route
             path="/"
@@ -28,14 +27,16 @@ function App() {
                 <FeaturesSection />
                 <PricingSection />
                 <FAQSection />
-                <ContactForm />
-                <Footer />
+                <div className="py-20 bg-focus-black">
+                  <ContactForm />
+                </div>
               </>
             }
           />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUsPage />} />
         </Routes>
-      </div>
+      </Layout>
     </BrowserRouter>
   );
 }
