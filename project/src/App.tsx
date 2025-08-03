@@ -11,29 +11,28 @@ import FAQSection from './components/FAQSection';
 import ContactForm from './components/Contact/ContactForm';
 import Footer from './components/Footer';
 
-const MainPage = () => {
-  return (
-    <>
-      <Hero />
-      <AnimatedIntroSection />
-      <ImpactSection />
-      <FullscreenImageSection />
-      <FeaturesSection />
-      <PricingSection />
-      <FAQSection />
-      <ContactForm />
-      <Footer />
-    </>
-  );
-};
-
 function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-founders-fire text-focus-black font-darker">
         <Navbar />
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <AnimatedIntroSection />
+                <ImpactSection />
+                <FullscreenImageSection />
+                <FeaturesSection />
+                <PricingSection />
+                <FAQSection />
+                <ContactForm />
+                <Footer />
+              </>
+            }
+          />
           <Route path="/about" element={<AboutUs />} />
         </Routes>
       </div>

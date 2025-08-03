@@ -17,31 +17,28 @@ const Navbar: React.FC = () => {
     setIsOpen(false);
     const [route, hash] = href.split('#');
     
-    if (route === '/') {
-      navigate(route);
+    if (route === '' && hash) {
+      const element = document.querySelector(`#${hash}`);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'auto',
+          block: 'start',
+        });
+      }
+    } else {
+      navigate(route || '/');
       if (hash) {
         setTimeout(() => {
           const element = document.querySelector(`#${hash}`);
           if (element) {
             element.scrollIntoView({
-              behavior: 'smooth',
+              behavior: 'auto',
               block: 'start',
             });
           }
-        }, 500); // Increased timeout to ensure page load
+        }, 100);
       } else {
         window.scrollTo(0, 0);
-      }
-    } else if (route) {
-      navigate(route);
-      window.scrollTo(0, 0);
-    } else if (hash) {
-      const element = document.querySelector(`#${hash}`);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
       }
     }
   };
