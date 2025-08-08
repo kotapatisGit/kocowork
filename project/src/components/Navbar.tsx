@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex">
+      <nav className="fixed top-0 left-0 right-0 z-30 flex">
         {/* Desktop Layout */}
         <div className="hidden md:flex w-full">
           {/* Logo Section - First Quarter */}
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
                 e.preventDefault();
                 handleNavigation('/#pricing');
               }}
-              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
             >
               Find Your Plan
             </a>
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
                 e.preventDefault();
                 handleNavigation('/about');
               }}
-              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
             >
               About Us
             </a>
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
                 e.preventDefault();
                 handleNavigation('/#contact');
               }}
-              className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[6px] hover:shadow-inner"
+              className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
             >
               Contact Us
             </a>
@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Layout - Logo and Menu Button */}
-        <div className="md:hidden flex w-full items-center justify-between bg-founders-fire px-6 py-4">
+        <div className="md:hidden flex w-full items-center justify-between bg-founders-fire px-6 py-2">
           {/* Logo and Company Name */}
           <div 
             onClick={handleLogoClick}
@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-80 bg-founders-fire z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed top-0 right-0 h-full w-80 border-l border-blank-slate bg-founders-fire z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

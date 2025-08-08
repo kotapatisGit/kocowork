@@ -87,8 +87,8 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="hero-section relative h-[70vh] md:min-h-screen bg-founders-fire">
-      <div className="relative min-h-screen flex flex-col pt-20 md:pt-20">
+    <section className="hero-section relative h-[60vh] md:min-h-screen bg-founders-fire">
+      <div className="relative h-[60vh] md:min-h-screen flex flex-col pt-12 md:pt-20">
         {/* Offer Banner */}
         <OfferBanner />
 
@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
               <img 
                 src="/images/hero-image-min.jpeg"
                 alt="Office Space"
-                className="w-full h-[55vh] md:h-[85vh] object-cover"
+                className="w-full h-[50vh] md:h-[85vh] object-cover"
                 loading="eager"
                 {...({ fetchpriority: "high" } as any)}
                 decoding="sync"
