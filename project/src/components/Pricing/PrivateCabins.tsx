@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 const PrivateCabins: React.FC = () => {
   const privateCabinsFeatures = [
     'Fully customizable office space',
-    'Flexible cabin sizes (1 to 20 people)',
+    'Flexible cabin sizes (1 to 50 people)',
     'Complimentary client discussion rooms',
     'Custom furniture and design options',
     '24/7 access to your cabin',
@@ -28,7 +28,7 @@ const PrivateCabins: React.FC = () => {
     },
     {
       title: 'Large Teams',
-      description: 'Customizable spaces for teams up to 20 people'
+      description: 'Customizable spaces for teams up to 50 people'
     }
   ];
 
