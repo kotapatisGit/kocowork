@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import OfferBanner from './OfferBanner';
+import FlagRibbon from './FlagRibbon';
+import { gsap } from 'gsap';
 
 // Define styles outside the component
 const animationStyles = `
@@ -95,7 +97,7 @@ const Hero: React.FC = () => {
         {/* Main Content Container */}
         <div className="w-full mx-auto relative">
           {/* Image Container */}
-          <div className="w-[95%] mx-auto rounded-3xl overflow-hidden">
+          <div className="w-[95%] mx-auto rounded-3xl overflow-clip relative">
             <picture>
               <source 
                 srcSet="/images/hero-image-min.webp" 
@@ -110,6 +112,9 @@ const Hero: React.FC = () => {
                 decoding="sync"
               />
             </picture>
+            {/* India Flag Ribbon */}
+            {/* Maintain 3:1 aspect ratio via Tailwind's arbitrary values */}
+            <RibbonWithGsap />
             {/* Overlay for better text visibility */}
             <div className="absolute inset-0 rounded-3xl" />
           </div>
@@ -177,3 +182,33 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
+// Local subcomponent to animate the flag ribbon using GSAP
+const RibbonWithGsap: React.FC = () => {
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+
+    // Start in the very top-left (off container) and slide into place
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        wrapperRef.current,
+        { x: -300, opacity: 0.8 },
+        { x: 0, opacity: 1, duration: 2, ease: 'power3.out' }
+      );
+    }, wrapperRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div
+      ref={wrapperRef}
+      className="absolute left-[-10px] top-[-28px] md:top-[-36px] lg:top-[-45px] z-[2] w-48 md:w-64 lg:w-80"
+      style={{ aspectRatio: '2 / 1' }}
+    >
+      <FlagRibbon className="w-full h-full" />
+    </div>
+  );
+};
