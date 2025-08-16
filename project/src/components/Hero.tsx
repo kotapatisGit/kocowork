@@ -205,7 +205,7 @@ const RibbonWithGsap: React.FC = () => {
   return (
     <div
       ref={wrapperRef}
-      className="absolute left-[-10px] top-[-28px] md:top-[-36px] lg:top-[-45px] z-[2] w-48 md:w-64 lg:w-80"
+      className="absolute left-[-10px] top-[-27px] md:top-[-36px] lg:top-[-45px] z-[2] w-48 md:w-64 lg:w-80"
       style={{ aspectRatio: '2 / 1' }}
     >
       <FlagRibbon className="w-full h-full" />

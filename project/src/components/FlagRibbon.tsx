@@ -21,9 +21,9 @@ const FlagRibbon: React.FC<FlagRibbonProps> = ({ className = '' }) => {
         {/* Flag stripes clipped to the inner ribbon area */}
         <g clipPath="url(#fr_inner_clip)" filter="url(#fr_shadow)">
           {/* Inner height now effectively 132 (scaled). Each stripe ~ 44 */}
-          <rect x="0" y="84" width="528" height="44" fill="#FF9933" />
-          <rect x="0" y="128" width="528" height="44" fill="#FFFFFF" />
-          <rect x="0" y="172" width="528" height="44" fill="#138808" />
+          <rect x="0" y="84" width="600" height="44" fill="#FF9933" />
+          <rect x="0" y="128" width="600" height="44" fill="#FFFFFF" />
+          <rect x="0" y="172" width="600" height="44" fill="#138808" />
 
           {/* Ashoka Chakra (stylized) */}
           <g transform="translate(264,150)">
