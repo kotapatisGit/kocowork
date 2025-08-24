@@ -10,6 +10,9 @@ import FAQSection from './components/FAQSection';
 import ContactForm from './components/Contact/ContactForm';
 import ContactUsPage from './components/Contact/ContactUsPage';
 import Layout from './components/Layout';
+import BlogsPage from './components/Blogs';
+import BlogPostRenderer from './components/Blogs/BlogPostRenderer';
+import BlogCarousel from './components/BlogCarousel';
 
 function App() {
   return (
@@ -27,6 +30,7 @@ function App() {
                 <FeaturesSection />
                 <PricingSection />
                 <FAQSection />
+                <BlogCarousel />
                 <div className="py-20 bg-focus-black">
                   <ContactForm />
                 </div>
@@ -35,6 +39,8 @@ function App() {
           />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs/:routeName" element={<BlogPostRenderer />} />
         </Routes>
       </Layout>
     </BrowserRouter>
