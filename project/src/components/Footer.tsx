@@ -45,12 +45,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start group">
                 <MapPin className="h-5 w-5 lg:h-8 lg:w-8 xl:h-10 xl:w-10 text-founders-fire mr-3 mt-1 flex-shrink-0 group-hover:text-founders-fire/80 transition-colors duration-300" />
-                <span className="text-blank-slate/80 text-md lg:text-lg xl:text-xl leading-relaxed">Plot No. 2, Champapet Rd, Nagarjuna Colony, Brundavan Nagar Colony, Hyderabad, Telangana 500079</span>
+                <span className="text-blank-slate/80 text-md lg:text-lg xl:text-xl leading-relaxed">Plot No. 2, Champapet Rd, Nagarjuna Colony, Hyderabad, Telangana 500079</span>
               </li>
               <li className="flex items-center group">
                 <Phone className="h-5 w-5 lg:h-8 lg:w-8 xl:h-10 xl:w-10 text-founders-fire mr-3 flex-shrink-0 group-hover:text-founders-fire/80 transition-colors duration-300" />
                 <span className="text-blank-slate/80 text-md lg:text-lg xl:text-xl hover:text-blank-slate transition-colors duration-300">
-                +91 9100109420
+                +91 9100109420, 9100109421
                 </span>
               </li>
               <li className="flex items-center group">

@@ -55,7 +55,7 @@ const FounderSection: React.FC<FounderSectionProps> = ({ isVisible }) => {
 
             <div className="relative">
               <blockquote className="text-2xl md:text-3xl font-bold text-focus-black leading-relaxed italic mb-8 relative z-10">
-                KOCO is built on one idea: together we grow and build a better India
+                KOCO is built on one idea: Together we grow and build a better India
               </blockquote>
             </div>
             
