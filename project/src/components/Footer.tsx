@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               Premium flexible workspaces designed for professionals, entrepreneurs, and growing businesses.
             </p>
             <div className="flex items-center space-x-5 pt-2">
-              <a href="https://www.facebook.com/share/16GJdJC6KV/?mibextid=wwXIfr" 
+              <a href="https://www.facebook.com/share/1b2ZCrEVHn/?mibextid=wwXIfr" 
                 className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
                 <Facebook className="h-5 w-5 lg:h-8 lg:w-8 xl:h-10 xl:w-10" />
               </a>
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
                 <Twitter className="h-5 w-5 lg:h-8 lg:w-8 xl:h-10 xl:w-10" />
               </a>
-              <a href="https://www.instagram.com/kocowork.co?igsh=czZ3MTE0ODNrNWE5" 
+              <a href="https://www.instagram.com/kocowork.in?igsh=cm1rZnd6cmJncWRx" 
                 className="text-blank-slate/70 hover:text-founders-fire transform hover:scale-110 transition-all duration-300">
                 <Instagram className="h-5 w-5 lg:h-8 lg:w-8 xl:h-10 xl:w-10" />
               </a>
