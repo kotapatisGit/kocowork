@@ -2,6 +2,8 @@
 
 This system allows your SEO specialist to easily add new blog posts by creating HTML files and updating a configuration file.
 
+## Step 1: Switch to branch "SEO"
+
 ## How It Works
 
 1. **Create HTML Content**: The SEO specialist creates an HTML file with the blog content
