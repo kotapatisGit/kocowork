@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import OfferBanner from './OfferBanner';
 import FlagRibbon from './FlagRibbon';
 import { gsap } from 'gsap';
+import NewYearOffer from './NewYearOffer';
 
 // Define styles outside the component
 const animationStyles = `
@@ -92,8 +93,9 @@ const Hero: React.FC = () => {
     <section className="hero-section relative h-[60vh] md:min-h-screen bg-founders-fire">
       <div className="relative h-[60vh] md:min-h-screen flex flex-col pt-12 md:pt-20">
         {/* Offer Banner */}
-        <OfferBanner />
 
+        {/* <OfferBanner /> */}
+        <NewYearOffer />
         {/* Main Content Container */}
         <div className="w-full mx-auto relative">
           {/* Image Container */}
