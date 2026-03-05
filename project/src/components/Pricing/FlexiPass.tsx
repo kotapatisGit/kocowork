@@ -68,7 +68,7 @@ const FlexiPass: React.FC = () => {
           </li>
         </ul>
         
-        <a 
+        {/* <a 
           href="#contact"
           onClick={(e) => {
             e.preventDefault();
@@ -90,7 +90,7 @@ const FlexiPass: React.FC = () => {
           className="block w-full text-center py-2 px-4 rounded-md font-medium transition-colors duration-300 bg-founders-fire hover:bg-opacity-90 text-blank-slate text-lg lg:text-xl"
         >
           Get Started
-        </a>
+        </a> */}
       </div>
     </div>
   );

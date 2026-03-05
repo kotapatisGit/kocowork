@@ -29,7 +29,7 @@ const DayPass: React.FC = () => {
             <span className="text-focus-black font-semibold text-[1.05rem] lg:text-xl">Shared environment</span>
           </li>
         </ul>
-        
+{/*         
         <a 
           href="#contact"
           onClick={(e) => {
@@ -50,7 +50,7 @@ const DayPass: React.FC = () => {
           className="block w-full text-center py-3 px-4 rounded-md font-semibold transition-colors duration-300 bg-blank-slate border-2 border-founders-fire hover:bg-founders-fire hover:text-blank-slate text-focus-black text-lg lg:text-xl mt-auto"
         >
           Get Started
-        </a>
+        </a> */}
       </div>
     </div>
   );

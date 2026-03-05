@@ -77,7 +77,7 @@ const KOCOVirtual: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <a 
             href="#contact"
             onClick={(e) => {
@@ -99,7 +99,7 @@ const KOCOVirtual: React.FC = () => {
           >
             Get Started
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

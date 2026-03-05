@@ -31,7 +31,7 @@ const OpenDeskPass: React.FC = () => {
           </li>
         </ul>
         
-        <a 
+        {/* <a 
           href="#contact"
           onClick={(e) => {
             e.preventDefault();
@@ -51,7 +51,7 @@ const OpenDeskPass: React.FC = () => {
           className="block w-full text-center py-3 px-4 rounded-md font-semibold transition-colors duration-300 bg-blank-slate border-2 border-founders-fire hover:bg-founders-fire hover:text-blank-slate text-focus-black text-lg lg:text-xl mt-auto"
         >
           Get Started
-        </a>
+        </a> */}
       </div>
     </div>
   );
