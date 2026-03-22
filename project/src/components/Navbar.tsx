@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Find Your Plan', href: '/#pricing' },
     { name: 'About Us', href: '/about' },
-    // { name: 'Contact Us', href: '/#contact' },
+    { name: 'Contact Us', href: '/#contact' },
   ];
 
   const handleNavigation = (href: string) => {
@@ -53,10 +53,10 @@ const Navbar: React.FC = () => {
       <nav className="fixed top-0 left-0 right-0 z-30 flex">
         {/* Desktop Layout */}
         <div className="hidden md:flex w-full">
-          {/* Logo Section - 1/3 width */}
+          {/* Logo Section - First Quarter */}
           <div 
             onClick={handleLogoClick}
-            className="w-1/3 bg-founders-fire px-6 py-1 flex items-center justify-center cursor-pointer hover:bg-founders-fire-dark transition-colors duration-200"
+            className="w-1/4 bg-founders-fire px-6 py-1 flex items-center justify-center cursor-pointer hover:bg-founders-fire-dark transition-colors duration-200"
           >
             <Logo 
               width={70} 
@@ -67,39 +67,39 @@ const Navbar: React.FC = () => {
             <span className="ml-2 text-4xl font-bold text-blank-slate">KOCOwork</span>
           </div>
 
-          {/* Navigation Items: Each item - 1/3 width */}
-          <a
-            href="/#pricing"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavigation('/#pricing');
-            }}
-            className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
-          >
-            Find Your Plan
-          </a>
-          <a
-            href="/about"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavigation('/about');
-            }}
-            className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
-          >
-            About Us
-          </a>
-          {/* 
-          <a
-            href="/#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavigation('/#contact');
-            }}
-            className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
-          >
-            Contact Us
-          </a> 
-          */}
+          {/* Navigation Items - Remaining Three Quarters */}
+          <div className="flex w-3/4">
+            <a
+              href="/#pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('/#pricing');
+              }}
+              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
+            >
+              Find Your Plan
+            </a>
+            <a
+              href="/about"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('/about');
+              }}
+              className="w-1/3 bg-blank-slate text-founders-fire font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
+            >
+              About Us
+            </a>
+            <a
+              href="/#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('/#contact');
+              }}
+              className="w-1/3 bg-founders-fire text-blank-slate font-medium text-2xl flex items-center justify-center transition-all duration-200 transform hover:translate-y-[8px] hover:shadow-inner"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
 
         {/* Mobile Layout - Logo and Menu Button */}

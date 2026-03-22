@@ -7,8 +7,8 @@ import FeaturesSection from './components/FeaturesSection';
 import AboutUs from './components/AboutUs';
 import PricingSection from './components/Pricing/PricingSection';
 import FAQSection from './components/FAQSection';
-// import ContactForm from './components/Contact/ContactForm';
-// import ContactUsPage from './components/Contact/ContactUsPage';
+import ContactForm from './components/Contact/ContactForm';
+import ContactUsPage from './components/Contact/ContactUsPage';
 import Layout from './components/Layout';
 import BlogsPage from './components/Blogs';
 import BlogPostRenderer from './components/Blogs/BlogPostRenderer';
@@ -31,11 +31,14 @@ function App() {
                 <PricingSection />
                 <FAQSection />
                 <BlogCarousel />
+                <div className="py-20 bg-focus-black">
+                  <ContactForm />
+                </div>
               </>
             }
           />
           <Route path="/about" element={<AboutUs />} />
-          {/* <Route path="/contact" element={<ContactUsPage />} /> */}
+          <Route path="/contact" element={<ContactUsPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:routeName" element={<BlogPostRenderer />} />
         </Routes>

@@ -70,7 +70,7 @@ const PrivateCabins: React.FC = () => {
               </div>
             </div>
             
-            {/* <div className="text-center">
+            <div className="text-center">
               <a 
                 href="#contact"
                 onClick={(e) => {
@@ -92,7 +92,7 @@ const PrivateCabins: React.FC = () => {
               >
                 Enquire Now
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
